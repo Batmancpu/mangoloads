@@ -3,528 +3,174 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080a10">
-  <meta name="description" content="MangoLoads — independent apps, experiments and open-source projects by Batmancpu.">
-  <meta property="og:title" content="MangoLoads — Thoughtful software, built independently">
-  <meta property="og:description" content="Explore Android apps, open-source work and interactive experiments by Batmancpu.">
+  <meta name="theme-color" content="#080a0f">
+  <meta name="description" content="MangoLoads is the independent software collection of Batmancpu: Android apps, open-source builds and interactive experiments.">
   <meta property="og:type" content="website">
-  <title>MangoLoads — Thoughtful software, built independently</title>
+  <meta property="og:title" content="MangoLoads — Independent software, thoughtfully made">
+  <meta property="og:description" content="Apps, experiments and releases by Batmancpu.">
+  <title>MangoLoads — Independent software, thoughtfully made</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <style>
-    :root {
-      color-scheme: dark;
-      --bg: #080a10;
-      --bg-soft: #0d111a;
-      --panel: rgba(255,255,255,.055);
-      --panel-strong: rgba(255,255,255,.085);
-      --line: rgba(255,255,255,.12);
-      --line-soft: rgba(255,255,255,.075);
-      --text: #f3f5fb;
-      --muted: #a0a8b8;
-      --subtle: #737d90;
-      --accent: #a8f0d0;
-      --accent-2: #9ab8ff;
-      --shadow: 0 24px 80px rgba(0,0,0,.34);
-      --radius: 28px;
-      --content: 1180px;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; background: var(--bg); }
-    body {
-      margin: 0; min-width: 320px; color: var(--text); background:
-        radial-gradient(900px 650px at 80% -10%, rgba(82,114,187,.16), transparent 68%),
-        radial-gradient(700px 520px at -15% 30%, rgba(88,190,159,.10), transparent 66%),
-        linear-gradient(180deg, #090b12 0%, #080a10 52%, #0b0e16 100%);
-      line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden;
-    }
-    body::before {
-      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1; opacity: .20;
-      background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
-      background-size: 72px 72px; mask-image: linear-gradient(to bottom, black, transparent 78%);
-    }
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-    button { color: inherit; }
-    .shell { width: min(var(--content), calc(100% - 56px)); margin: 0 auto; }
-    .topbar {
-      position: sticky; top: 12px; z-index: 20; width: min(var(--content), calc(100% - 32px)); margin: 12px auto 0;
-      display: flex; align-items: center; justify-content: space-between; gap: 20px;
-      min-height: 66px; padding: 10px 13px 10px 18px; border: 1px solid var(--line);
-      border-radius: 22px; background: rgba(13,16,25,.72); backdrop-filter: blur(24px) saturate(160%);
-      -webkit-backdrop-filter: blur(24px) saturate(160%); box-shadow: 0 12px 48px rgba(0,0,0,.22);
-    }
-    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 0; font-weight: 760; letter-spacing: -.045em; }
-    .brand-mark {
-      display: grid; place-items: center; width: 37px; height: 37px; border-radius: 13px; color: #07100e;
-      font-weight: 900; font-size: 17px; letter-spacing: -.08em;
-      background: linear-gradient(145deg, #d9fff0 0%, #8ee4c5 46%, #6c9ee9 100%);
-      box-shadow: inset 0 1px 1px rgba(255,255,255,.9), 0 5px 22px rgba(119,223,190,.18);
-    }
-    .brand-name { font-size: 17px; white-space: nowrap; }
-    .brand-name span { color: var(--muted); font-weight: 500; }
-    .nav { display: flex; align-items: center; gap: 5px; }
-    .nav a, .nav button {
-      border: 0; background: transparent; color: var(--muted); padding: 10px 13px; border-radius: 13px;
-      font-size: 13px; font-weight: 600; cursor: pointer; transition: color .2s ease, background .2s ease;
-    }
-    .nav a:hover, .nav button:hover { color: var(--text); background: rgba(255,255,255,.07); }
-    .nav .github-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text); background: rgba(255,255,255,.09); border: 1px solid var(--line); }
-    .github-link svg { width: 16px; height: 16px; }
-    .hero { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items: center; padding: 104px 0 82px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: #c8f8e5; font-size: 11px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
-    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #93e4c2; box-shadow: 0 0 16px rgba(147,228,194,.8); }
-    h1 { margin: 22px 0 20px; max-width: 700px; font-size: clamp(54px, 7.2vw, 94px); line-height: .99; letter-spacing: -.075em; font-weight: 760; }
-    h1 .gradient { color: transparent; background: linear-gradient(105deg, #f7fbff 8%, #b9f2dd 46%, #9dbbff 88%); -webkit-background-clip: text; background-clip: text; }
-    .hero-copy { max-width: 570px; color: var(--muted); font-size: clamp(16px, 1.7vw, 19px); line-height: 1.75; }
-    .hero-copy strong { color: #e8edf7; font-weight: 650; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .button {
-      display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 18px;
-      border-radius: 15px; border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,.06);
-      font-size: 13px; font-weight: 700; transition: transform .2s ease, background .2s ease, border-color .2s ease;
-    }
-    .button:hover { transform: translateY(-2px); background: rgba(255,255,255,.11); border-color: rgba(255,255,255,.22); }
-    .button.primary { color: #09120f; border-color: transparent; background: linear-gradient(120deg, #c8f7e3, #9dd6f1); box-shadow: 0 8px 28px rgba(131,220,193,.16); }
-    .button.primary:hover { background: linear-gradient(120deg, #ddfff0, #b1e3fa); }
-    .button svg { width: 16px; height: 16px; }
-    .hero-meta { display: flex; align-items: center; gap: 18px; margin-top: 34px; color: var(--subtle); font-size: 12px; }
-    .meta-dot { width: 3px; height: 3px; border-radius: 50%; background: #6f7a8e; }
-    .hero-art { position: relative; min-height: 390px; display: grid; place-items: center; isolation: isolate; }
-    .orb { position: absolute; border-radius: 50%; filter: blur(2px); }
-    .orb.one { width: 260px; height: 260px; top: 35px; right: 11%; background: radial-gradient(circle at 28% 22%, rgba(211,255,238,.72), rgba(131,203,221,.20) 35%, rgba(107,129,224,.04) 70%); box-shadow: 0 0 100px rgba(115,192,212,.12); }
-    .orb.two { width: 190px; height: 190px; bottom: 26px; left: 7%; background: radial-gradient(circle at 30% 22%, rgba(180,210,255,.30), rgba(99,126,212,.06) 60%, transparent 75%); }
-    .glass-tile {
-      position: absolute; border: 1px solid rgba(255,255,255,.21); border-radius: 28px;
-      background: linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.045) 45%, rgba(160,201,255,.07));
-      backdrop-filter: blur(25px) saturate(165%); -webkit-backdrop-filter: blur(25px) saturate(165%);
-      box-shadow: inset 0 1px 1px rgba(255,255,255,.32), inset 0 -1px 1px rgba(255,255,255,.05), 0 28px 65px rgba(0,0,0,.27);
-    }
-    .tile-main { width: min(320px, 74%); height: 250px; right: 8%; top: 72px; transform: rotate(-8deg); padding: 23px; }
-    .tile-main::before { content: ""; position: absolute; inset: 1px; border-radius: inherit; background: linear-gradient(120deg, rgba(255,255,255,.16), transparent 32%, transparent 68%, rgba(169,201,255,.09)); pointer-events: none; }
-    .tile-head { display: flex; align-items: center; justify-content: space-between; position: relative; }
-    .tile-brand { display: flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 750; }
-    .tile-brand i { width: 25px; height: 25px; display: grid; place-items: center; border-radius: 9px; background: linear-gradient(145deg,#d5ffeb,#83d2c3); color: #07130f; font-size: 12px; font-style: normal; }
-    .tile-dots { display: flex; gap: 4px; }
-    .tile-dots b { width: 4px; height: 4px; border-radius: 50%; background: rgba(255,255,255,.55); }
-    .tile-line { height: 8px; border-radius: 12px; background: rgba(255,255,255,.14); margin-top: 19px; }
-    .tile-line.long { width: 82%; height: 13px; background: rgba(237,255,249,.36); margin-top: 35px; }
-    .tile-line.mid { width: 66%; margin-top: 9px; }
-    .tile-line.short { width: 43%; margin-top: 9px; }
-    .tile-foot { position: absolute; left: 23px; right: 23px; bottom: 22px; display: flex; align-items: center; justify-content: space-between; color: rgba(240,248,255,.67); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
-    .tile-chip { position: absolute; left: 3%; bottom: 54px; width: 165px; height: 112px; transform: rotate(9deg); padding: 16px; animation: float 8s ease-in-out infinite; }
-    .tile-chip .mini-orbs { display: flex; gap: 7px; margin: 9px 0 12px; }
-    .mini-orbs i { display: block; width: 24px; height: 24px; border-radius: 9px; background: linear-gradient(145deg,rgba(223,255,246,.85),rgba(129,177,240,.5)); box-shadow: inset 0 1px 2px white; }
-    .tile-chip .tiny-line { height: 5px; width: 74%; border-radius: 9px; background: rgba(255,255,255,.2); }
-    .tile-chip .tiny-line + .tiny-line { margin-top: 5px; width: 48%; }
-    .tile-ring { width: 85px; height: 85px; right: 2%; bottom: 36px; border-radius: 28px; transform: rotate(17deg); display: grid; place-items: center; font-size: 30px; color: rgba(224,255,245,.88); animation: float 9s ease-in-out infinite reverse; }
-    @keyframes float { 0%,100% { translate: 0 0; } 50% { translate: 0 -12px; } }
-    .stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 0 0 94px; }
-    .stat { padding: 19px 21px; border: 1px solid var(--line-soft); border-radius: 19px; background: rgba(255,255,255,.025); }
-    .stat strong { display: block; font-size: 23px; line-height: 1.2; letter-spacing: -.05em; }
-    .stat span { display: block; margin-top: 6px; color: var(--subtle); font-size: 11px; }
-    section { margin: 0 0 100px; }
-    .section-top { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 26px; }
-    .section-kicker { color: #9fe3c7; font-size: 10px; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
-    h2 { margin: 8px 0 0; font-size: clamp(30px, 4vw, 43px); line-height: 1.1; letter-spacing: -.06em; font-weight: 700; }
-    .section-description { max-width: 430px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-    .featured {
-      position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 30px; align-items: center; overflow: hidden;
-      min-height: 320px; padding: clamp(25px, 4vw, 46px); border: 1px solid rgba(199,255,231,.18); border-radius: 30px;
-      background: radial-gradient(480px 240px at 90% 20%, rgba(105,181,155,.16), transparent 72%), linear-gradient(135deg, rgba(255,255,255,.075), rgba(255,255,255,.022));
-      box-shadow: var(--shadow); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px);
-    }
-    .featured::after { content: ""; position: absolute; width: 420px; height: 420px; right: -170px; bottom: -280px; border-radius: 50%; border: 1px solid rgba(197,255,235,.13); box-shadow: 0 0 0 28px rgba(197,255,235,.025), 0 0 0 58px rgba(197,255,235,.018); pointer-events: none; }
-    .featured-copy { position: relative; z-index: 1; }
-    .featured-label { display: inline-flex; gap: 8px; align-items: center; border-radius: 99px; padding: 7px 11px; background: rgba(158,236,202,.10); border: 1px solid rgba(158,236,202,.18); color: #b8f7dc; font-size: 10px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
-    .featured h3 { margin: 19px 0 9px; font-size: clamp(34px,4.4vw,48px); line-height: 1; letter-spacing: -.065em; }
-    .featured-copy p { max-width: 470px; color: var(--muted); font-size: 14px; line-height: 1.8; }
-    .featured-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
-    .feature-art { position: relative; min-height: 230px; display: grid; place-items: center; }
-    .news-stack { position: relative; width: min(330px,100%); height: 220px; transform: rotate(4deg); }
-    .news-sheet { position: absolute; inset: 9px 17px 5px 0; border: 1px solid rgba(255,255,255,.19); border-radius: 20px; background: linear-gradient(145deg,rgba(255,255,255,.15),rgba(255,255,255,.035)); backdrop-filter: blur(18px); box-shadow: 0 24px 50px rgba(0,0,0,.26), inset 0 1px rgba(255,255,255,.28); padding: 19px; }
-    .news-sheet.back { inset: 25px 0 0 34px; transform: rotate(8deg); background: rgba(110,139,197,.12); }
-    .news-top { display: flex; align-items: center; gap: 8px; color: #dfffee; font-size: 10px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
-    .news-top i { display: block; width: 8px; height: 8px; border-radius: 3px; background: #aaf0d3; }
-    .news-title { width: 82%; height: 13px; border-radius: 10px; background: rgba(245,255,250,.48); margin-top: 25px; }
-    .news-title.small { margin-top: 8px; width: 60%; height: 8px; background: rgba(245,255,250,.2); }
-    .news-row { display: flex; gap: 11px; margin-top: 19px; align-items: center; }
-    .news-thumb { width: 48px; height: 43px; border-radius: 10px; background: linear-gradient(140deg,rgba(182,238,213,.75),rgba(113,144,220,.48)); }
-    .news-lines { flex: 1; }
-    .news-lines b { display: block; height: 6px; width: 93%; border-radius: 9px; background: rgba(255,255,255,.24); }
-    .news-lines b + b { margin-top: 7px; width: 65%; background: rgba(255,255,255,.12); }
-    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 15px; margin: 0 0 22px; }
-    .filters { display: flex; flex-wrap: wrap; gap: 7px; }
-    .filter {
-      padding: 9px 13px; border: 1px solid var(--line-soft); border-radius: 99px; background: rgba(255,255,255,.035);
-      color: var(--muted); font-size: 11px; font-weight: 700; cursor: pointer; transition: .2s ease;
-    }
-    .filter:hover { color: var(--text); border-color: var(--line); }
-    .filter.active { background: rgba(176,239,214,.13); border-color: rgba(176,239,214,.3); color: #c9f8e4; }
-    .searchbox { position: relative; width: min(280px,100%); }
-    .searchbox svg { position: absolute; left: 13px; top: 50%; translate: 0 -50%; width: 15px; height: 15px; color: var(--subtle); pointer-events: none; }
-    .searchbox input { width: 100%; min-height: 39px; padding: 0 13px 0 38px; color: var(--text); outline: none; border: 1px solid var(--line-soft); border-radius: 13px; background: rgba(255,255,255,.035); font-size: 12px; }
-    .searchbox input:focus { border-color: rgba(174,237,214,.46); box-shadow: 0 0 0 3px rgba(174,237,214,.07); }
-    .searchbox input::placeholder { color: #758095; }
-    .project-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
-    .project-card {
-      min-width: 0; position: relative; padding: 23px; border: 1px solid var(--line-soft); border-radius: 23px;
-      background: linear-gradient(145deg, rgba(255,255,255,.058), rgba(255,255,255,.024));
-      box-shadow: 0 16px 48px rgba(0,0,0,.13); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-      transition: transform .24s ease, border-color .24s ease, background .24s ease;
-    }
-    .project-card:hover { transform: translateY(-4px); border-color: rgba(204,240,226,.22); background: linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.03)); }
-    .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 15px; }
-    .project-icon { width: 52px; height: 52px; flex: 0 0 52px; display: grid; place-items: center; overflow: hidden; border-radius: 17px; border: 1px solid rgba(255,255,255,.19); box-shadow: inset 0 1px 1px rgba(255,255,255,.35), 0 8px 24px rgba(0,0,0,.18); font-size: 15px; font-weight: 850; letter-spacing: -.06em; color: #07110d; }
-    .project-icon img { width: 100%; height: 100%; object-fit: cover; }
-    .icon-mint { background: linear-gradient(145deg,#dcfff0,#7ccbb8 58%,#9db9f2); }
-    .icon-blue { background: linear-gradient(145deg,#e4efff,#8faff1 56%,#c7d4ff); }
-    .icon-amber { background: linear-gradient(145deg,#fff1c9,#efb875 57%,#e98c82); }
-    .icon-violet { background: linear-gradient(145deg,#f0e3ff,#b7a5ed 57%,#7b8fcb); }
-    .icon-slate { background: linear-gradient(145deg,#e4eaf2,#9baabd 60%,#7b8ca4); }
-    .card-label { display: block; color: var(--subtle); margin-top: 16px; font-size: 10px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
-    .project-card h3 { margin: 5px 0 8px; font-size: 23px; line-height: 1.15; letter-spacing: -.055em; }
-    .project-card p { min-height: 66px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
-    .status { white-space: nowrap; padding: 6px 9px; border-radius: 99px; border: 1px solid var(--line-soft); background: rgba(255,255,255,.045); color: #c3ccda; font-size: 9px; font-weight: 750; letter-spacing: .04em; }
-    .status.green { color: #b9f5d9; border-color: rgba(145,225,185,.2); background: rgba(145,225,185,.08); }
-    .status.blue { color: #c5d9ff; border-color: rgba(152,185,255,.2); background: rgba(152,185,255,.08); }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 17px; }
-    .tag { color: #aeb8c8; background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.065); border-radius: 8px; padding: 5px 8px; font-size: 9px; font-weight: 650; }
-    .card-actions { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding-top: 17px; margin-top: 18px; border-top: 1px solid var(--line-soft); }
-    .card-actions a { color: #d8e9e3; font-size: 11px; font-weight: 700; }
-    .card-actions a:hover { color: #b9f5d9; }
-    .card-actions a.secondary { color: var(--subtle); font-weight: 600; }
-    .empty-state { display: none; padding: 38px; text-align: center; border: 1px dashed var(--line); border-radius: 20px; color: var(--muted); font-size: 13px; }
-    .note { margin-top: 17px; color: var(--subtle); font-size: 11px; line-height: 1.7; }
-    .principles { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 13px; }
-    .principle { padding: 22px; border: 1px solid var(--line-soft); border-radius: 20px; background: rgba(255,255,255,.028); }
-    .principle .symbol { width: 34px; height: 34px; display: grid; place-items: center; margin-bottom: 17px; border-radius: 12px; color: #c7f5e2; background: rgba(166,232,204,.10); border: 1px solid rgba(166,232,204,.15); font-size: 15px; }
-    .principle h3 { margin: 0 0 7px; font-size: 15px; letter-spacing: -.025em; }
-    .principle p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
-    .about-panel { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 28px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(120deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); }
-    .about-left { display: flex; align-items: center; gap: 17px; }
-    .avatar { width: 55px; height: 55px; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 8px 24px rgba(0,0,0,.2); }
-    .about-panel h3 { margin: 0; font-size: 17px; letter-spacing: -.035em; }
-    .about-panel p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
-    .footer { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 28px 0 38px; border-top: 1px solid var(--line-soft); color: var(--subtle); font-size: 10px; }
-    .footer-links { display: flex; gap: 17px; }
-    .footer a:hover { color: var(--text); }
-    .fade-in { animation: appear .7s both; }
-    @keyframes appear { from { opacity: 0; translate: 0 14px; } to { opacity: 1; translate: 0 0; } }
-    @media (max-width: 900px) {
-      .hero { gap: 20px; padding-top: 80px; }
-      .hero-art { min-height: 330px; }
-      .tile-main { right: 3%; }
-      .tile-chip { left: 0; }
-      .featured { grid-template-columns: 1fr .8fr; }
-      .section-top { align-items: flex-start; flex-direction: column; gap: 10px; }
-    }
-    @media (max-width: 680px) {
-      html { scroll-padding-top: 84px; }
-      .shell { width: min(100% - 34px, var(--content)); }
-      .topbar { top: 7px; width: calc(100% - 16px); min-height: 58px; margin-top: 7px; padding: 8px 9px 8px 12px; border-radius: 18px; }
-      .brand-mark { width: 34px; height: 34px; border-radius: 11px; }
-      .brand-name { font-size: 15px; }
-      .nav { gap: 1px; }
-      .nav a { display: none; }
-      .nav .github-link { padding: 9px 11px; font-size: 11px; }
-      .nav button { padding: 8px; }
-      .hero { display: block; padding: 70px 0 40px; }
-      h1 { font-size: clamp(53px, 14vw, 76px); margin-top: 18px; }
-      .hero-copy { font-size: 15px; }
-      .hero-actions { margin-top: 23px; }
-      .button { min-height: 45px; padding: 0 15px; font-size: 12px; }
-      .hero-meta { margin-top: 23px; gap: 10px; font-size: 10px; flex-wrap: wrap; }
-      .hero-art { min-height: 260px; margin: 22px -7px 0; }
-      .tile-main { width: 260px; max-width: 77%; height: 205px; top: 24px; right: 8%; border-radius: 23px; padding: 17px; }
-      .tile-line.long { margin-top: 26px; }
-      .tile-foot { left: 17px; right: 17px; bottom: 16px; }
-      .tile-chip { left: 1%; bottom: 20px; width: 135px; height: 93px; border-radius: 21px; padding: 12px; }
-      .tile-ring { width: 65px; height: 65px; right: 0; bottom: 20px; }
-      .orb.one { width: 205px; height: 205px; top: 18px; right: 10%; }
-      .orb.two { width: 145px; height: 145px; bottom: 5px; left: 4%; }
-      .stats { gap: 7px; margin-bottom: 72px; }
-      .stat { padding: 14px 12px; border-radius: 15px; }
-      .stat strong { font-size: 19px; }
-      .stat span { font-size: 9px; line-height: 1.35; }
-      section { margin-bottom: 76px; }
-      .section-top { margin-bottom: 20px; }
-      h2 { font-size: 33px; }
-      .section-description { font-size: 12px; }
-      .featured { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 24px 21px 14px; border-radius: 23px; }
-      .featured h3 { font-size: 38px; }
-      .featured-copy p { font-size: 12px; }
-      .feature-art { min-height: 205px; margin-top: 6px; }
-      .news-stack { width: min(300px,100%); height: 190px; }
-      .news-sheet { padding: 16px; }
-      .project-grid { grid-template-columns: 1fr; gap: 10px; }
-      .project-card { padding: 20px; border-radius: 20px; }
-      .project-card p { min-height: 0; }
-      .card-label { margin-top: 13px; }
-      .toolbar { align-items: stretch; }
-      .searchbox { width: 100%; }
-      .filters { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 3px; }
-      .filter { white-space: nowrap; }
-      .principles { grid-template-columns: 1fr; gap: 9px; }
-      .principle { padding: 18px; }
-      .principle .symbol { margin-bottom: 12px; }
-      .about-panel { align-items: flex-start; flex-direction: column; padding: 21px; }
-      .footer { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 28px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    }
-    body.light {
-      color-scheme: light; --bg:#eef2f5; --text:#17212c; --muted:#596878; --subtle:#718092; --line:rgba(32,48,64,.15); --line-soft:rgba(32,48,64,.09); --shadow:0 24px 70px rgba(43,58,76,.12);
-      background: radial-gradient(850px 600px at 80% -10%,rgba(123,159,220,.20),transparent 68%),radial-gradient(700px 520px at -15% 30%,rgba(110,204,170,.18),transparent 66%),linear-gradient(180deg,#f2f6f8,#e9eef2);
-    }
-    body.light::before { opacity:.34; background-image:linear-gradient(rgba(30,48,65,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(30,48,65,.045) 1px,transparent 1px); }
-    body.light .topbar { background:rgba(246,250,252,.75); }
-    body.light .brand-mark { color:#10221b; }
-    body.light .nav .github-link { color:#17212c; }
-    body.light .hero-copy strong { color:#233543; }
-    body.light .stat, body.light .project-card, body.light .principle, body.light .about-panel { background:rgba(255,255,255,.48); }
-    body.light .project-card:hover { background:rgba(255,255,255,.75); }
-    body.light .project-card h3, body.light .principle h3, body.light .about-panel h3 { color:#17212c; }
-    body.light .card-actions a { color:#315b51; }
-    body.light .card-actions a.secondary { color:#718092; }
-    body.light .featured { background:radial-gradient(480px 240px at 90% 20%,rgba(105,181,155,.18),transparent 72%),linear-gradient(135deg,rgba(255,255,255,.82),rgba(255,255,255,.4)); }
-    body.light .news-sheet { background:linear-gradient(145deg,rgba(255,255,255,.82),rgba(255,255,255,.48)); }
-    body.light .news-title { background:rgba(35,68,59,.33); }
-    body.light .news-title.small { background:rgba(35,68,59,.16); }
-    body.light .news-lines b { background:rgba(35,68,59,.19); }
-    body.light .news-lines b + b { background:rgba(35,68,59,.1); }
-    body.light .news-top { color:#315b51; }
-    body.light .eyebrow { color:#326b57; }
-    body.light .featured-label { color:#326b57; }
-    body.light .featured-copy p { color:#596878; }
-    body.light .section-kicker { color:#3d8068; }
-    body.light h1 .gradient { background-image:linear-gradient(105deg,#17212c 8%,#3b896f 48%,#607fca 88%); }
-    body.light .button { color:#17212c; background:rgba(255,255,255,.55); }
-    body.light .button.primary { color:#10221b; }
-    body.light .filter { color:#596878; }
-    body.light .filter.active { color:#245c48; }
-    body.light .tag { color:#596878; background:rgba(30,48,65,.045); }
-    body.light .searchbox input { color:#17212c; background:rgba(255,255,255,.6); }
-    body.light .tile-brand { color:#17212c; }
-    body.light .tile-line { background:rgba(35,68,59,.14); }
-    body.light .tile-line.long { background:rgba(35,68,59,.28); }
-    body.light .tile-foot { color:rgba(23,33,44,.6); }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#top" aria-label="MangoLoads home">
-      <span class="brand-mark">m.</span><span class="brand-name">MangoLoads<span> / studio</span></span>
+    <a class="brand" href="index.html" aria-label="MangoLoads home">
+      <span class="brand-mark">m.</span>
+      <span class="brand-name">MangoLoads<span> / independent studio</span></span>
     </a>
     <nav class="nav" aria-label="Main navigation">
       <a href="#work">Projects</a>
-      <a href="#principles">Principles</a>
-      <a href="#about">About</a>
-      <button id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch colour theme">◐</button>
-      <a class="github-link" href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.53v-2.08c-3.1.68-3.76-1.31-3.76-1.31-.5-1.29-1.24-1.63-1.24-1.63-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.59 1.21 3.22.92.1-.72.39-1.21.7-1.49-2.48-.28-5.09-1.24-5.09-5.53 0-1.22.44-2.22 1.15-3-.12-.28-.5-1.42.11-2.96 0 0 .94-.3 3.05 1.15a10.6 10.6 0 0 1 5.55 0c2.11-1.45 3.05-1.15 3.05-1.15.61 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.61 5.25-5.1 5.52.4.35.75 1.03.75 2.08V22c0 .29.2.63.77.52A11.1 11.1 0 0 0 12 .9Z"/></svg>
-        GitHub ↗
-      </a>
+      <a href="#approach">Approach</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">◐</button>
+      <a class="nav-cta" href="downloads.html">Downloads <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <main id="top" class="shell">
-    <section class="hero">
-      <div class="fade-in">
-        <div class="eyebrow">Independent software studio</div>
-        <h1>Ideas, made<br><span class="gradient">beautifully useful.</span></h1>
-        <p class="hero-copy">A home for <strong>thoughtful apps, open-source work and experiments</strong> — built with curiosity, careful engineering and an eye for the details that make software feel right.</p>
+  <main>
+    <section class="container hero" id="top">
+      <div class="hero-copy fade-up">
+        <div class="eyebrow">Independent software · Built in public</div>
+        <h1 class="display">Useful ideas.<br><span class="gradient-text">Thoughtfully made.</span></h1>
+        <p class="hero-lede">MangoLoads is a home for <strong>apps, open-source builds and experiments</strong> — from small tools that solve everyday problems to bigger ideas shaped one detail at a time.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#work">Explore the projects <span aria-hidden="true">↘</span></a>
-          <a class="button" href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">View GitHub profile ↗</a>
+          <a class="button primary" href="#work">Explore the work <span aria-hidden="true">↓</span></a>
+          <a class="button subtle" href="downloads.html">Get the apps <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-meta"><span>Android & web</span><i class="meta-dot"></i><span>Open source</span><i class="meta-dot"></i><span>Built independently</span></div>
+        <div class="hero-footnote"><span>Android & web</span><i></i><span>Open source</span><i></i><span>Independent builds</span></div>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <div class="orb one"></div><div class="orb two"></div>
-        <div class="glass-tile tile-main">
-          <div class="tile-head"><div class="tile-brand"><i>m.</i> MangoLoads</div><div class="tile-dots"><b></b><b></b><b></b></div></div>
-          <div class="tile-line long"></div><div class="tile-line mid"></div><div class="tile-line short"></div>
-          <div class="tile-foot"><span>Ideas into software</span><span>✳ 01 / 08</span></div>
+
+      <div class="hero-stage fade-up" aria-label="Illustration of the MangoLoads brrrNews app">
+        <div class="stage-glow"></div>
+        <div class="device">
+          <div class="device-screen">
+            <div class="device-island"></div>
+            <div class="device-status"><span>9:41</span><span>●●●  ▰</span></div>
+            <div class="app-top"><div class="app-wordmark"><i>bn</i> brrrNews</div><div class="app-avatar"></div></div>
+            <div class="app-date">Friday · The daily brief</div>
+            <div class="app-headline">The world,<br>with context.</div>
+            <div class="app-subline">News worth understanding. Signal over noise.</div>
+            <div class="app-tabs"><span>Today</span><span>Explore</span><span>Saved</span></div>
+            <div class="story"><div class="story-art"></div><div class="story-content"><div class="story-tag">Governance · GS II</div><div class="story-line"></div><div class="story-line sm"></div></div></div>
+            <div class="story"><div class="story-art blue"></div><div class="story-content"><div class="story-tag">Economy · GS III</div><div class="story-line"></div><div class="story-line sm"></div></div></div>
+            <div class="story"><div class="story-art ochre"></div><div class="story-content"><div class="story-tag">Environment · GS III</div><div class="story-line"></div><div class="story-line sm"></div></div></div>
+            <div class="app-bottom"><span></span><span></span><span></span><span></span></div>
+          </div>
         </div>
-        <div class="glass-tile tile-chip"><div class="tile-brand"><i>✳</i> Made to explore</div><div class="mini-orbs"><i></i><i></i><i></i></div><div class="tiny-line"></div><div class="tiny-line"></div></div>
-        <div class="glass-tile tile-ring">✧</div>
+        <div class="floating-glass float-card"><div class="float-label">MangoLoads / 01</div><b>Made with intent.</b><small>Less noise. More care.</small><div class="float-orbs"><i></i><i></i><i></i></div></div>
+        <div class="floating-glass float-chip"><i>✳</i><div><span>Curiosity in progress</span><small>Ideas → useful software</small></div></div>
       </div>
     </section>
 
-    <div class="stats" aria-label="Portfolio overview">
-      <div class="stat"><strong>08</strong><span>Public repositories reviewed</span></div>
-      <div class="stat"><strong>03</strong><span>Original projects & experiments</span></div>
-      <div class="stat"><strong>∞</strong><span>Room to build what matters</span></div>
+    <div class="container proof-strip fade-up" aria-label="Portfolio facts">
+      <div class="proof"><strong>08</strong><span>Public project repositories</span></div>
+      <div class="proof"><strong>03</strong><span>Original apps & experiments</span></div>
+      <div class="proof"><strong>05</strong><span>Community & derivative builds</span></div>
+      <div class="proof"><strong>01</strong><span>Place to find every release</span></div>
     </div>
 
-    <section id="featured">
-      <div class="section-top">
-        <div><div class="section-kicker">In focus</div><h2>Built for a real purpose.</h2></div>
-        <p class="section-description">A closer look at brrrNews — a local-first Android reader designed to make current affairs more useful for serious study.</p>
+    <section class="container section fade-up" id="featured">
+      <div class="section-head">
+        <div><div class="kicker">In focus · 01</div><h2>Current affairs,<br>with a little more context.</h2></div>
+        <p class="section-intro">brrrNews brings a more deliberate reading experience to current affairs: focused discovery, subject-aware organisation and tools for reviewing what you read.</p>
       </div>
-      <article class="featured">
-        <div class="featured-copy">
-          <span class="featured-label">Featured project · Android</span>
+      <article class="feature-panel">
+        <div class="feature-content">
+          <span class="pill">Original project · Android</span>
           <h3>brrrNews</h3>
-          <p>Current affairs, with an editorial lens. A news reader that organises stories around meaningful subjects and UPSC syllabus relevance, with saved reading, practice tools and personal study statistics.</p>
-          <div class="featured-actions">
-            <a class="button primary" href="https://github.com/Batmancpu/CurrentLens/releases" target="_blank" rel="noopener noreferrer">Download latest build ↗</a>
-            <a class="button" href="https://github.com/Batmancpu/CurrentLens" target="_blank" rel="noopener noreferrer">Explore source ↗</a>
+          <p>A local-first news reader with a UPSC-oriented editorial lens. Follow the day's important stories, organise them by subject, save what matters and use lightweight practice tools to check your understanding.</p>
+          <div class="feature-points"><span>UPSC syllabus mapping</span><span>Saved reading</span><span>Study statistics</span><span>Quiz & practice</span></div>
+          <div class="hero-actions">
+            <a class="button primary" href="downloads.html#brrrnews">Download brrrNews <span aria-hidden="true">↗</span></a>
+            <a class="button" href="https://github.com/Batmancpu/CurrentLens" target="_blank" rel="noopener noreferrer">Explore source</a>
           </div>
         </div>
-        <div class="feature-art" aria-hidden="true">
-          <div class="news-stack">
-            <div class="news-sheet back"></div>
-            <div class="news-sheet">
-              <div class="news-top"><i></i> Today · The daily brief</div>
-              <div class="news-title"></div><div class="news-title small"></div>
-              <div class="news-row"><div class="news-thumb"></div><div class="news-lines"><b></b><b></b></div></div>
-              <div class="news-row"><div class="news-thumb" style="background:linear-gradient(140deg,rgba(193,207,255,.7),rgba(122,153,214,.35))"></div><div class="news-lines"><b></b><b></b></div></div>
-            </div>
+        <div class="feature-visual" aria-hidden="true">
+          <div class="news-window">
+            <div class="news-window-top"><strong>brrrNews</strong><span>Today · 08:42</span></div>
+            <div class="news-window-head">A clearer view<br>of what matters.</div>
+            <div class="news-window-sub">Stories grouped by topic, subject and context.</div>
+            <div class="news-entry"><div class="news-entry-art"></div><div class="news-entry-copy"><b></b><b></b></div></div>
+            <div class="news-entry"><div class="news-entry-art b"></div><div class="news-entry-copy"><b></b><b></b></div></div>
+            <div class="news-window-foot"><span>GOVERNANCE · GS II</span><span>READING LIST ↗</span></div>
           </div>
         </div>
       </article>
     </section>
 
-    <section id="work">
-      <div class="section-top">
-        <div><div class="section-kicker">The collection</div><h2>Projects & experiments.</h2></div>
-        <p class="section-description">A curated view of public work from GitHub. Original builds are separated from community forks and release-only repositories, with their lineage labelled clearly.</p>
+    <section class="container section fade-up" id="work">
+      <div class="section-head">
+        <div><div class="kicker">The collection · 02</div><h2>Made, modified<br>and still evolving.</h2></div>
+        <p class="section-intro">A transparent catalogue of public work. Original projects are separated from forks and compiled builds, with source repositories and release history kept close at hand.</p>
       </div>
-      <div class="toolbar">
-        <div class="filters" role="group" aria-label="Filter projects">
+      <div class="project-toolbar">
+        <div class="filter-row" role="group" aria-label="Filter projects">
           <button class="filter active" type="button" data-filter="all">Everything</button>
           <button class="filter" type="button" data-filter="original">Original work</button>
-          <button class="filter" type="button" data-filter="community">Forks & archives</button>
+          <button class="filter" type="button" data-filter="community">Forks & builds</button>
         </div>
-        <label class="searchbox">
+        <label class="search" aria-label="Search projects">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
-          <input id="projectSearch" type="search" placeholder="Find a project…" aria-label="Search projects">
+          <input id="projectSearch" type="search" placeholder="Find a project…" autocomplete="off">
         </label>
       </div>
-      <div id="projectGrid" class="project-grid" aria-live="polite"></div>
-      <div id="emptyState" class="empty-state">No projects match that search. Try another name or category.</div>
-      <p class="note">Attribution note: community forks, derivative builds and release mirrors are labelled as such. Names, trademarks, code and assets remain with their respective authors. Private repositories are not displayed.</p>
+
+      <div class="projects-grid" id="projectGrid">
+        <article class="project-card" data-kind="original" data-search="brrrnews currentlens android news reader upsc current affairs"><div class="project-media clean"><div class="project-symbol">bn</div></div><div class="project-body"><div class="project-meta"><span>Android · News</span><span class="project-type original">Original</span></div><h3>brrrNews</h3><p>A local-first current-affairs reader with an editorial lens for UPSC, saved reading and practice tools.</p><div class="project-bottom"><a href="downloads.html#brrrnews">Get the app ↗</a><a class="source-link" href="https://github.com/Batmancpu/CurrentLens" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="original" data-search="expboard expmango android keyboard hinglish offline typing"><div class="project-media clean amber"><div class="project-symbol">ex</div></div><div class="project-body"><div class="project-meta"><span>Android · Keyboard</span><span class="project-type original">Original</span></div><h3>expBoard</h3><p>A lightweight keyboard prototype focused on fast English and Hinglish typing, adaptive vocabulary and privacy.</p><div class="project-bottom"><a href="downloads.html#expboard">Get the build ↗</a><a class="source-link" href="https://github.com/Batmancpu/expmango" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="original" data-search="liquid lab react typescript glass optics interactive experiment web"><div class="project-media clean violet"><div class="project-symbol">✧</div></div><div class="project-body"><div class="project-meta"><span>Web · Visual lab</span><span class="project-type original">Original</span></div><h3>Liquid Lab</h3><p>An interactive laboratory exploring glass optics, refraction, ambient illumination and cross-window haze.</p><div class="project-bottom"><a href="downloads.html#liquidlab">Get the build ↗</a><a class="source-link" href="https://github.com/Batmancpu/liquid" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="community" data-search="brrrboard frostkeys heliboard keyboard android frosted glass fork"><div class="project-media"><img src="https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_4.png" alt="brrrBoard keyboard interface screenshot" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Android · Keyboard</span><span class="project-type">Upstream fork</span></div><h3>brrrBoard / FrostKeys</h3><p>A customised HeliBoard-derived keyboard repository exploring frosted-glass UI and typing features.</p><div class="project-bottom"><a href="downloads.html#brrrboard">View latest build ↗</a><a class="source-link" href="https://github.com/Batmancpu/brrrBoard" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="community" data-search="dictate keyboard dictator speech transcription whisper android fork compile"><div class="project-media"><img src="https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_01_en-EN.png" alt="Dictate Keyboard dictation interface" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Android · Voice typing</span><span class="project-type">Compiled fork</span></div><h3>Dictate Keyboard</h3><p>A compiled distribution of the upstream Dictate keyboard, built around voice dictation and speech-to-text engines.</p><div class="project-bottom"><a href="downloads.html#dictate">Download APK ↗</a><a class="source-link" href="https://github.com/Batmancpu/Dictator-" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="community" data-search="metrolist music youtube music android coloros fork"><div class="project-media"><img src="https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_2.png" alt="Metrolist music player interface" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Android · Music</span><span class="project-type">Upstream fork</span></div><h3>Metrolist Fluid</h3><p>A personalised build of the open-source Metrolist YouTube Music client, with a fluid visual treatment.</p><div class="project-bottom"><a href="downloads.html#metrolist">Download APK ↗</a><a class="source-link" href="https://github.com/Batmancpu/Metrolist" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="community" data-search="bitchord bit chord music player android youtube music fork"><div class="project-media"><img src="https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png" alt="BitChord music player banner" loading="lazy"></div><div class="project-body"><div class="project-meta"><span>Android · Music</span><span class="project-type">Upstream fork</span></div><h3>BitChord FC</h3><p>A personalised fork of BitChord, a music client with an Apple Music-inspired visual direction.</p><div class="project-bottom"><a href="downloads.html#bitchord">Download APK ↗</a><a class="source-link" href="https://github.com/Batmancpu/Bitchordfc" target="_blank" rel="noopener noreferrer">Source ↗</a></div></div></article>
+
+        <article class="project-card" data-kind="community" data-search="afusekt infusekt release archive media player android fork"><div class="project-media clean blue"><div class="project-symbol">af</div></div><div class="project-body"><div class="project-meta"><span>Android · Media</span><span class="project-type">Release archive</span></div><h3>AfuseKt</h3><p>A release archive for the upstream AfuseKt application. This repository does not contain an attached GitHub APK release.</p><div class="project-bottom"><a href="downloads.html#afusekt">Release status ↗</a><a class="source-link" href="https://github.com/Batmancpu/InfuseKt-release" target="_blank" rel="noopener noreferrer">Repository ↗</a></div></div></article>
+      </div>
+      <div class="empty-state" id="emptyProjects">No projects match that search. Try another name or category.</div>
     </section>
 
-    <section id="principles">
-      <div class="section-top">
-        <div><div class="section-kicker">The approach</div><h2>Good software feels considered.</h2></div>
-        <p class="section-description">The details matter: performance, clarity, privacy, accessibility and a consistent experience across screens.</p>
+    <section class="container section fade-up" id="approach">
+      <div class="section-head">
+        <div><div class="kicker">The philosophy · 03</div><h2>Care is visible<br>in the details.</h2></div>
+        <p class="section-intro">A good tool should stay out of the way, respect the person using it and feel coherent from the first tap to the last screen.</p>
       </div>
       <div class="principles">
-        <article class="principle"><div class="symbol">◇</div><h3>Useful before clever</h3><p>Start with a clear problem, then build only the complexity that earns its place.</p></article>
-        <article class="principle"><div class="symbol">⌁</div><h3>Private by design</h3><p>Prefer local-first behaviour and transparent dependencies. Make connectivity intentional.</p></article>
-        <article class="principle"><div class="symbol">✧</div><h3>Polish is part of the product</h3><p>Responsive layouts, careful motion, accessible contrast and tactile visual details belong together.</p></article>
+        <article class="principle"><div class="principle-icon">◇</div><h3>Useful first</h3><p>Start with a real problem. Add complexity only when it makes the experience measurably better.</p></article>
+        <article class="principle"><div class="principle-icon">⌁</div><h3>Privacy by default</h3><p>Prefer local-first behaviour, transparent dependencies and intentional network access where the project allows it.</p></article>
+        <article class="principle"><div class="principle-icon">✧</div><h3>Polish with purpose</h3><p>Responsive layouts, readable type, restrained motion and tactile details should support the product — not distract from it.</p></article>
       </div>
     </section>
 
-    <section id="about">
-      <div class="section-top">
-        <div><div class="section-kicker">Behind the work</div><h2>One curious builder.</h2></div>
-        <p class="section-description">MangoLoads is the personal project shelf of Batmancpu — a place to share what is being built, tested and learned.</p>
-      </div>
-      <div class="about-panel">
-        <div class="about-left">
-          <img class="avatar" src="https://avatars.githubusercontent.com/u/261216860?v=4" alt="GitHub profile avatar" loading="lazy">
-          <div><h3>Batmancpu</h3><p>Independent builder · Android · Open source</p></div>
+    <section class="container section fade-up">
+      <div class="download-callout">
+        <div class="download-callout-inner">
+          <div><div class="kicker">The download shelf</div><h2>Your next install is one click away.</h2><p>Find the latest APKs, build identifiers, release dates and source repositories in one place. Preview builds are labelled clearly.</p></div>
+          <div class="callout-actions"><a class="button primary" href="downloads.html">Open downloads <span aria-hidden="true">↗</span></a><a class="button" href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub profile</a></div>
         </div>
-        <a class="button" href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">Follow the work on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="container section fade-up" id="about">
+      <div class="section-head">
+        <div><div class="kicker">Behind MangoLoads · 04</div><h2>One builder.<br>A growing shelf.</h2></div>
+        <p class="section-intro">MangoLoads is the personal home of Batmancpu’s public projects — a place to follow the work, find the source and install available builds.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-person"><img class="avatar" src="https://avatars.githubusercontent.com/u/261216860?v=4" alt="Batmancpu GitHub avatar" loading="lazy"><div><h3>Batmancpu</h3><p>Independent builder · Android · Open source</p></div></div>
+        <a class="button" href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">Follow on GitHub ↗</a>
       </div>
     </section>
   </main>
 
-  <footer class="shell footer">
-    <span>© <span id="year"></span> MangoLoads. Built with care.</span>
-    <div class="footer-links"><a href="https://github.com/Batmancpu/mangoloads" target="_blank" rel="noopener noreferrer">Website source ↗</a><a href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="#top">Back to top ↑</a></div>
+  <footer class="container footer">
+    <span>© <span data-year></span> MangoLoads. Built with care.</span>
+    <div class="footer-links"><a href="downloads.html">Downloads</a><a href="https://github.com/Batmancpu/mangoloads" target="_blank" rel="noopener noreferrer">Website source</a><a href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#top">Back to top ↑</a></div>
   </footer>
-
-  <script>
-    const projects = [
-      {
-        title:"brrrNews", label:"CurrentLens · Android news reader", kind:"original", status:"Public testing", tone:"green", icon:"bn", iconClass:"icon-mint",
-        description:"A local-first news reader with UPSC-oriented editorial filtering, saved stories, reading statistics and quiz practice. Public testing builds are published through GitHub Releases.",
-        tags:["Android","Current affairs","UPSC"], repo:"https://github.com/Batmancpu/CurrentLens", release:"https://github.com/Batmancpu/CurrentLens/releases", action:"Get latest APK"
-      },
-      {
-        title:"brrrBoard / FrostKeys", label:"Android keyboard · HeliBoard-based fork", kind:"community", status:"Fork + customization", tone:"blue", icon:"bb", iconClass:"icon-blue",
-        logo:"https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/icon/FrostKeys_Icon_with_bg.png",
-        description:"A personalised keyboard project exploring a frosted-glass interface, typing tools, custom dictionaries, glide input and configurable privacy-aware features.",
-        tags:["Android","Keyboard","Frosted glass"], repo:"https://github.com/Batmancpu/brrrBoard", release:"https://github.com/Batmancpu/brrrBoard/releases", action:"View builds"
-      },
-      {
-        title:"expBoard", label:"expmango · Android keyboard prototype", kind:"original", status:"Prototype", tone:"blue", icon:"ex", iconClass:"icon-amber",
-        description:"A lightweight, local-first keyboard experiment focused on fast English and Hinglish typing, adaptive vocabulary, typo correction and privacy-aware input.",
-        tags:["Android","Hinglish","Offline-first"], repo:"https://github.com/Batmancpu/expmango", action:"Explore source"
-      },
-      {
-        title:"Liquid Lab", label:"liquid · Interactive web experiment", kind:"original", status:"Experiment", tone:"blue", icon:"✧", iconClass:"icon-violet",
-        description:"A React and TypeScript laboratory for Liquid Glass optics, ambient illumination, interactive shapes, motion and cross-window haze experiments.",
-        tags:["Web","React","Liquid Glass"], repo:"https://github.com/Batmancpu/liquid", action:"Explore experiment"
-      },
-      {
-        title:"Dictate Keyboard", label:"Dictator- · Speech-to-text keyboard", kind:"community", status:"Derivative project", tone:"blue", icon:"dk", iconClass:"icon-slate",
-        logo:"https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/Icon_512x512_2_round.png",
-        description:"A keyboard repository centred on voice dictation and transcription, including selectable cloud providers and on-device speech models. Listed separately from original work.",
-        tags:["Android","Voice typing","On-device AI"], repo:"https://github.com/Batmancpu/Dictator-", action:"View repository"
-      },
-      {
-        title:"Metrolist", label:"YouTube Music client · Community fork", kind:"community", status:"Fork", tone:"blue", icon:"ml", iconClass:"icon-amber",
-        logo:"https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/icon.png",
-        description:"A community-maintained Android YouTube Music client repository. The upstream project identifies itself as being in maintenance mode; this is presented as a fork, not an original MangoLoads app.",
-        tags:["Android","Music","Community fork"], repo:"https://github.com/Batmancpu/Metrolist", release:"https://github.com/Batmancpu/Metrolist/releases", action:"View releases"
-      },
-      {
-        title:"BitChord", label:"Bitchordfc · Music app fork", kind:"community", status:"Fork", tone:"blue", icon:"bc", iconClass:"icon-violet",
-        logo:"https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Logo.png",
-        description:"A fork of an aesthetic Android music client repository, with playback, library and customisation features documented by the upstream project.",
-        tags:["Android","Music player","Community fork"], repo:"https://github.com/Batmancpu/Bitchordfc", action:"View repository"
-      },
-      {
-        title:"AfuseKt release archive", label:"InfuseKt-release · Distribution repository", kind:"community", status:"Release mirror", tone:"", icon:"af", iconClass:"icon-slate",
-        description:"A release-only repository for AfuseKt. Its README states that it contains app releases rather than source code; the original application belongs to its upstream developers.",
-        tags:["Android","Release archive","Third-party app"], repo:"https://github.com/Batmancpu/InfuseKt-release", action:"View archive"
-      }
-    ];
-
-    const esc = (s) => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-    const grid = document.getElementById("projectGrid");
-    const empty = document.getElementById("emptyState");
-    let currentFilter = "all";
-
-    function renderProjects() {
-      const q = document.getElementById("projectSearch").value.trim().toLowerCase();
-      const shown = projects.filter(p => {
-        const matchKind = currentFilter === "all" || p.kind === currentFilter;
-        const haystack = [p.title,p.label,p.description,...p.tags].join(" ").toLowerCase();
-        return matchKind && haystack.includes(q);
-      });
-      grid.innerHTML = shown.map(p => {
-        const logo = p.logo ? '<img src="' + esc(p.logo) + '" alt="" loading="lazy" onerror="this.remove()">' : "";
-        const icon = '<div class="project-icon ' + esc(p.iconClass) + '">' + (p.logo ? logo : '<span>' + esc(p.icon) + '</span>') + '</div>';
-        const release = p.release ? '<a href="' + esc(p.release) + '" target="_blank" rel="noopener noreferrer">' + esc(p.action) + ' ↗</a>' : '<a href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">' + esc(p.action) + ' ↗</a>';
-        const source = p.release ? '<a class="secondary" href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">Source ↗</a>' : '<a class="secondary" href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">GitHub ↗</a>';
-        return '<article class="project-card fade-in"><div class="card-head">' + icon + '<span class="status ' + esc(p.tone || "") + '">' + esc(p.status) + '</span></div><span class="card-label">' + esc(p.label) + '</span><h3>' + esc(p.title) + '</h3><p>' + esc(p.description) + '</p><div class="tags">' + p.tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") + '</div><div class="card-actions">' + release + source + '</div></article>';
-      }).join("");
-      empty.style.display = shown.length ? "none" : "block";
-    }
-
-    document.querySelectorAll("[data-filter]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        currentFilter = btn.dataset.filter;
-        document.querySelectorAll("[data-filter]").forEach(b => b.classList.toggle("active", b === btn));
-        renderProjects();
-      });
-    });
-    document.getElementById("projectSearch").addEventListener("input", renderProjects);
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("themeToggle").addEventListener("click", () => {
-      document.body.classList.toggle("light");
-      document.getElementById("themeToggle").textContent = document.body.classList.contains("light") ? "☼" : "◐";
-    });
-    renderProjects();
-  </script>
+  <script src="site.js" defer></script>
 </body>
 </html>
