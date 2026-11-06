@@ -23,3 +23,24 @@ body{background:radial-gradient(ellipse at 78% 8%,#263b6b 0,transparent 38%),rad
 .gallery-track img{background:#141e34;border-color:#ffffff24}.feature-pill{background:#ffffff09;border-color:#ffffff24;color:#c7d5f4}
 .product-final{background:linear-gradient(115deg,#e4eaff,#c6d5ff 52%,#e6d3ff)!important;color:#11182b!important}.product-final h2{color:#11182b!important}.product-final p{color:#45516e!important}.product-final .kicker{color:#4c6398!important}.product-final .button{background:#111b33!important;color:#f3f6ff!important}.product-final .button.primary{background:#fff!important;color:#11182b!important}
 @media(max-width:700px){.hero{padding-top:70px;min-height:0}.hero:before{inset:-65px -18px 0;opacity:.8}.hero-art{height:370px}.hero-art:before{width:340px;height:340px}.hero-art:after{width:280px;height:280px}.collection{padding-top:75px}.product-slide{min-height:555px;background:linear-gradient(150deg,#172440,#10182b 70%,#0b1020)!important}.home-end{padding:32px 23px}.product-hero{padding-top:65px}.download-row{background:#10182a55;border-radius:16px;padding:14px;margin:10px 0;border:1px solid #ffffff16}}
+
+/* Distinct material and light treatments for each application family */
+.slide-news{background:radial-gradient(ellipse at 78% 35%,#e0a76b55,transparent 35%),linear-gradient(125deg,#182d3a,#101c2d 58%,#0a111d)!important}
+.slide-board{background:radial-gradient(ellipse at 75% 35%,#83b8ff55,transparent 38%),linear-gradient(125deg,#172640,#10172c)!important}
+.slide-exp{background:radial-gradient(ellipse at 75% 38%,#ffc16b44,transparent 38%),linear-gradient(125deg,#302316,#171626)!important}
+.slide-liquid{background:radial-gradient(ellipse at 75% 35%,#b59aff66,transparent 38%),linear-gradient(125deg,#20183c,#11172b)!important}
+.slide-metro{background:radial-gradient(ellipse at 75% 35%,#ed9eaa55,transparent 38%),linear-gradient(125deg,#321d32,#15172b)!important}
+.slide-bit{background:radial-gradient(ellipse at 75% 35%,#a98cff55,transparent 38%),linear-gradient(125deg,#211a3b,#11172b)!important}
+.slide-dictate{background:radial-gradient(ellipse at 75% 35%,#83d9ff55,transparent 38%),linear-gradient(125deg,#142c3b,#10172b)!important}
+.slide-afuse{background:radial-gradient(ellipse at 75% 35%,#77d6c955,transparent 38%),linear-gradient(125deg,#142f33,#10172b)!important}
+.product-art.news{background:radial-gradient(ellipse at 70% 30%,#ffbd7b 0,transparent 24%),linear-gradient(145deg,#284557,#101b2e)!important}
+.product-art.keyboard,.product-art.keyboard-simple{background:radial-gradient(ellipse at 70% 28%,#8dbdff 0,transparent 28%),linear-gradient(145deg,#1d3558,#10182b)!important}
+.product-art.liquid{background:radial-gradient(ellipse at 50% 42%,#d1a8ff 0,transparent 32%),linear-gradient(145deg,#30214f,#10172c)!important}
+.product-art.music{background:radial-gradient(ellipse at 68% 30%,#f5a4b7 0,transparent 30%),linear-gradient(145deg,#40223e,#12172c)!important}
+.product-art.dictate{background:radial-gradient(ellipse at 50% 40%,#8ae3ff 0,transparent 30%),linear-gradient(145deg,#1b4052,#10182b)!important}
+.product-art.archive{background:radial-gradient(ellipse at 50% 40%,#7ee3ca 0,transparent 30%),linear-gradient(145deg,#1b4140,#10182b)!important}
+.product-art.news .library-art{background:#101d2ccc;border-color:#f5c68b66}.product-art.news .library-art span{background:linear-gradient(90deg,#d69d64,#425c70)}
+.product-art.music .album-art{box-shadow:0 25px 90px #ec83b855}
+.product-art.keyboard .keyboard-board,.product-art.keyboard-simple .keyboard-board{background:#152847bb;border-color:#a7caff88}
+.story-media{background-image:radial-gradient(ellipse at 50% 45%,var(--product-accent,#8caeff)33,transparent 62%),linear-gradient(145deg,#172746,#10172b)!important}
+@media(max-width:700px){.product-art{max-width:calc(100% - 30px)}}
