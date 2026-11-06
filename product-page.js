@@ -86,7 +86,17 @@
     document.querySelectorAll(".product-story").forEach((el,i)=>{
       el.style.setProperty("--story-index",String(i));
     });
-    document.querySelectorAll(".fade-up").forEach(el=>el.classList.add("visible"));
+    const storyNodes=document.querySelectorAll(".product-story.fade-up");
+    if("IntersectionObserver" in window){
+      const observer=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+        });
+      },{threshold:0.12,rootMargin:"0px 0px -34px 0px"});
+      storyNodes.forEach(node=>observer.observe(node));
+    }else{
+      storyNodes.forEach(node=>node.classList.add("visible"));
+    }
   }
 
   async function fetchLatest(app){
