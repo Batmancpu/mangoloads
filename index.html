@@ -3,167 +3,152 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#f5f4f0">
-  <meta name="description" content="MangoLoads — a small collection of apps and experiments, shaped by one person and built mostly with AI.">
+  <meta name="theme-color" content="#f4f1eb">
+  <meta name="description" content="MangoLoads — apps, experiments and small tools by Batmancpu. Ideas, direction and testing by one person; much of the code built with AI.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MangoLoads">
-  <meta property="og:description" content="A small collection of apps and experiments, built mostly with AI.">
-  <title>MangoLoads</title>
+  <meta property="og:title" content="MangoLoads — Ideas, made useful">
+  <meta property="og:description" content="A collection of apps, experiments and small tools.">
+  <title>MangoLoads — Ideas, made useful</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="home-page">
-  <header class="topbar">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
     <a class="brand" href="index.html" aria-label="MangoLoads home">
-      <span class="brand-mark">m.</span>
-      <span class="brand-name">MangoLoads</span>
+      <span class="brand-symbol" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none"><path d="M21.1 5.3c-2.7 3.2-3.4 5.7-3.1 8.1 2.8-1.7 5.2-4.7 5.8-8.9 3.8 1.7 7.2 5.1 8.7 9.7 3.4 10.1-2.5 20.4-11.8 21.4C11.2 36.7 4.5 29.8 5.7 20.8 6.9 12.4 13.4 7.6 21.1 5.3Z" fill="#DFA44F"/><path d="M18.2 9.8c1.9-4.4 5.2-6.6 9-7.3-1.1 4.8-4.3 7.7-9 7.3Z" fill="#66816B"/><path d="M11.1 24.3c1.6 5.1 5.5 7.8 10.5 7.3" stroke="#FFF5DF" stroke-opacity=".8" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </span>
+      <span class="brand-name">mangoloads</span>
     </a>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#selected">Selected work</a>
-      <a href="downloads.html" class="nav-cta">Downloads <span aria-hidden="true">↗</span></a>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">◐</button>
+    <nav class="primary-nav" aria-label="Main navigation">
+      <a href="#collection">Explore</a>
+      <a href="#about">About</a>
     </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">◐</button>
+      <a class="header-link dark" href="downloads.html">Downloads <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
 
-  <main>
-    <section class="home-hero container" id="top">
-      <div class="home-hero-copy fade-up">
-        <div class="eyebrow">A small collection of things being made</div>
-        <h1>Ideas become<br><span class="gradient-text">things you can use.</span></h1>
-        <p class="home-intro">Apps, tools and experiments built one idea at a time. <strong>One person behind the ideas; AI does much of the building.</strong></p>
-        <div class="home-hero-actions">
-          <a href="#selected" class="button primary">Take a look <span aria-hidden="true">↓</span></a>
-          <a href="downloads.html" class="button">Browse all apps <span aria-hidden="true">↗</span></a>
+  <main id="main">
+    <section class="container hero" id="top">
+      <div class="hero-copy fade-up">
+        <div class="eyebrow">A small collection by Batmancpu</div>
+        <h1>Useful ideas.<br><span class="soft">Made real.</span></h1>
+        <p>Apps, experiments and little tools, made one idea at a time. <strong>I'm the person behind the ideas and decisions; AI helps me build much of the code.</strong></p>
+        <div class="hero-actions">
+          <a class="button primary" href="#collection">Explore the collection <span aria-hidden="true">↓</span></a>
+          <a class="button" href="downloads.html">See all downloads <span aria-hidden="true">↗</span></a>
         </div>
+        <div class="hero-foot"><span>Android apps</span><i></i><span>Web experiments</span><i></i><span>Always evolving</span></div>
       </div>
-      <div class="home-hero-art fade-up" aria-hidden="true">
-        <div class="home-glow"></div>
-        <div class="mango-glass">
-          <div class="mango-shine"></div>
-          <div class="mango-mark">m.</div>
+
+      <div class="hero-art fade-up" aria-label="A preview of the MangoLoads applications">
+        <div class="hero-device">
+          <div class="hero-device-screen">
+            <div class="hero-island"></div>
+            <div class="hero-status"><span>9:41</span><span>●●● ◧</span></div>
+            <div class="hero-app-brand"><i>bn</i><b>brrrNews</b><span>◉</span></div>
+            <div class="hero-app-kicker">TODAY · THE DAILY BRIEF</div>
+            <div class="hero-app-title">The world,<br>with context.</div>
+            <div class="hero-app-desc">Read beyond the headline.</div>
+            <div class="hero-app-tabs"><b>Today</b><span>Explore</span><span>Saved</span></div>
+            <div class="hero-story"><i class="hero-story-art"></i><div class="hero-story-copy"><small>GOVERNANCE · GS II</small><i></i><i></i></div></div>
+            <div class="hero-story"><i class="hero-story-art blue"></i><div class="hero-story-copy"><small>ECONOMY · GS III</small><i></i><i></i></div></div>
+            <div class="hero-story"><i class="hero-story-art gold"></i><div class="hero-story-copy"><small>ENVIRONMENT · GS III</small><i></i><i></i></div></div>
+            <div class="hero-app-nav"><i></i><i></i><i></i><i></i></div>
+          </div>
         </div>
-        <div class="home-float-card home-float-top"><span>THE WORK</span><strong>Curiosity,<br>in progress.</strong></div>
-        <div class="home-float-card home-float-bottom"><span>BUILT WITH AI</span><strong>Idea → App</strong><i>✳</i></div>
-        <div class="home-orbit orbit-a"></div><div class="home-orbit orbit-b"></div>
+        <div class="hero-float left"><small>THE COLLECTION</small><strong>Curiosity,<br>in progress.</strong></div>
+        <div class="hero-float right"><small>MADE WITH AI</small><strong>Idea → App</strong><div class="chips"><i></i><i></i><i></i></div></div>
+        <div class="hero-caption">A FEW OF THE THINGS TAKING SHAPE</div>
       </div>
     </section>
 
-    <section class="selected-section container" id="selected">
-      <div class="selected-heading fade-up">
-        <div>
-          <div class="kicker">A closer look</div>
-          <h2>Some things<br>I've been making.</h2>
-        </div>
-        <p>Swipe through a few projects. Each has its own page, with the details and the latest available build.</p>
+    <div class="container home-index" aria-label="Collection categories">
+      <span><b>01</b> News & reading</span><i></i>
+      <span><b>02</b> Keyboards</span><i></i>
+      <span><b>03</b> Music</span><i></i>
+      <span><b>04</b> Experiments</span>
+    </div>
+
+    <section class="container collection" id="collection">
+      <div class="section-heading fade-up">
+        <div><div class="kicker">Take a closer look</div><h2>A few things<br>I've been making.</h2></div>
+        <p>Swipe through the collection. Each project has its own page, with the details, features, screenshots and latest available build.</p>
       </div>
 
-      <div class="showcase-wrap fade-up">
-        <div class="showcase-controls">
-          <div class="showcase-count"><span id="slideCurrent">01</span><i></i><span id="slideTotal">04</span></div>
-          <div class="showcase-arrows">
-            <button type="button" id="slidePrev" aria-label="Previous project">←</button>
-            <button type="button" id="slideNext" aria-label="Next project">→</button>
+      <div class="carousel-shell fade-up">
+        <div class="carousel-controls">
+          <div class="carousel-progress"><strong id="slideCurrent">01</strong><span>—</span><span id="slideTotal">08</span><span>PROJECTS</span></div>
+          <div>
+            <button class="carousel-arrow" type="button" id="slidePrev" aria-label="Previous project">←</button>
+            <button class="carousel-arrow" type="button" id="slideNext" aria-label="Next project">→</button>
           </div>
         </div>
 
-        <div class="showcase-viewport" id="showcaseViewport" aria-label="Featured projects carousel" tabindex="0">
-          <div class="showcase-track" id="showcaseTrack">
-            <article class="showcase-slide slide-news">
-              <a class="slide-link" href="apps/brrrnews/" aria-label="Explore brrrNews"></a>
-              <div class="slide-copy">
-                <div class="slide-overline"><span class="slide-index">01</span><span>NEWS · ANDROID</span></div>
-                <h3>brrrNews</h3>
-                <p class="slide-tagline">A clearer view<br>of what matters.</p>
-                <p class="slide-description">Current affairs with context, subject-aware discovery and a few tools to help the important details stay with you.</p>
-                <a class="slide-more" href="apps/brrrnews/">Explore brrrNews <span>↗</span></a>
-              </div>
-              <div class="slide-visual news-visual" aria-hidden="true">
-                <div class="phone-preview">
-                  <div class="phone-island"></div><div class="phone-status"><span>9:41</span><span>●●● ◧</span></div>
-                  <div class="phone-brand"><i>bn</i><b>brrrNews</b><span>◉</span></div>
-                  <div class="phone-date">TODAY · THE DAILY BRIEF</div>
-                  <div class="phone-heading">The world,<br>with context.</div>
-                  <div class="phone-tabs"><b>Today</b><span>Explore</span><span>Saved</span></div>
-                  <div class="phone-story"><i></i><div><small>GOVERNANCE · GS II</small><b></b><b></b></div></div>
-                  <div class="phone-story blue"><i></i><div><small>ECONOMY · GS III</small><b></b><b></b></div></div>
-                  <div class="phone-story amber"><i></i><div><small>ENVIRONMENT · GS III</small><b></b><b></b></div></div>
-                  <div class="phone-nav"><i></i><i></i><i></i><i></i></div>
-                </div>
-                <div class="visual-caption">READ WITH CONTEXT</div>
-              </div>
-            </article>
+        <div class="carousel-track" id="projectCarousel" tabindex="0" aria-label="Swipe through all eight applications">
+          <a class="product-slide slide-news" href="apps/brrrnews/" data-slide>
+            <div class="slide-copy"><span class="slide-index">01 / 08</span><span class="slide-category">News · Android</span><h3>brrrNews</h3><p class="slide-tagline">Read beyond<br>the headline.</p><p class="slide-description">Current affairs with context, subject-aware discovery and tools to help the important details stay with you.</p><span class="slide-link">Explore brrrNews <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><div class="art-fallback"><div class="art-library"><b>THE DAILY BRIEF</b><span></span><span></span><span></span><span></span></div></div></div></div>
+          </a>
 
-            <article class="showcase-slide slide-keyboard">
-              <a class="slide-link" href="apps/brrrboard/" aria-label="Explore brrrBoard"></a>
-              <div class="slide-copy">
-                <div class="slide-overline"><span class="slide-index">02</span><span>KEYBOARD · ANDROID</span></div>
-                <h3>brrrBoard</h3>
-                <p class="slide-tagline">A softer side<br>of typing.</p>
-                <p class="slide-description">A customised keyboard project exploring frosted surfaces, useful typing tools and a calmer visual language.</p>
-                <a class="slide-more" href="apps/brrrboard/">Explore brrrBoard <span>↗</span></a>
-              </div>
-              <div class="slide-visual screenshot-visual">
-                <img src="https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_4.png" alt="brrrBoard keyboard screenshot" loading="lazy">
-                <div class="visual-caption">FROSTED GLASS · CUSTOM BUILD</div>
-              </div>
-            </article>
+          <a class="product-slide slide-board" href="apps/brrrboard/" data-slide>
+            <div class="slide-copy"><span class="slide-index">02 / 08</span><span class="slide-category">Keyboard · Android</span><h3>brrrBoard</h3><p class="slide-tagline">A softer side<br>of typing.</p><p class="slide-description">A customised keyboard exploring frosted surfaces, expressive controls and practical typing tools.</p><span class="slide-link">Explore brrrBoard <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><img src="https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_4.png" alt="brrrBoard keyboard interface" loading="lazy"></div></div>
+          </a>
 
-            <article class="showcase-slide slide-ex">
-              <a class="slide-link" href="apps/expboard/" aria-label="Explore expBoard"></a>
-              <div class="slide-copy">
-                <div class="slide-overline"><span class="slide-index">03</span><span>KEYBOARD · PROTOTYPE</span></div>
-                <h3>expBoard</h3>
-                <p class="slide-tagline">Words, without<br>the waiting.</p>
-                <p class="slide-description">A small local-first keyboard experiment for English and Hinglish, with quick suggestions and a lightweight typing path.</p>
-                <a class="slide-more" href="apps/expboard/">Explore expBoard <span>↗</span></a>
-              </div>
-              <div class="slide-visual ex-visual" aria-hidden="true">
-                <div class="ex-device">
-                  <div class="ex-device-top"><span>9:41</span><span>●●● ◧</span></div>
-                  <div class="ex-paper"><div class="ex-paper-line"></div><div class="ex-paper-line short"></div><div class="ex-cursor"></div></div>
-                  <div class="ex-suggestions"><b>hello</b><span>help</span><span>held</span></div>
-                  <div class="ex-keyboard">
-                    <div>q w e r t y u i o p</div><div>a s d f g h j k l</div><div>⇧ z x c v b n m ⌫</div><div class="ex-bottom"><span>?123</span><span>English · Hinglish</span><span>↵</span></div>
-                  </div>
-                </div>
-                <div class="visual-caption">LOCAL-FIRST TYPING</div>
-              </div>
-            </article>
+          <a class="product-slide slide-exp" href="apps/expboard/" data-slide>
+            <div class="slide-copy"><span class="slide-index">03 / 08</span><span class="slide-category">Keyboard · Prototype</span><h3>expBoard</h3><p class="slide-tagline">Typing that<br>stays out of the way.</p><p class="slide-description">Fast English and Hinglish typing, personal vocabulary and deterministic suggestions in a lightweight prototype.</p><span class="slide-link">Explore expBoard <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><div class="art-fallback"><div class="art-keyboard"><div class="art-keyboard-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-keyboard-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-keyboard-row"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div></div>
+          </a>
 
-            <article class="showcase-slide slide-liquid">
-              <a class="slide-link" href="apps/liquidlab/" aria-label="Explore Liquid Lab"></a>
-              <div class="slide-copy">
-                <div class="slide-overline"><span class="slide-index">04</span><span>WEB · VISUAL EXPERIMENT</span></div>
-                <h3>Liquid Lab</h3>
-                <p class="slide-tagline">A little light.<br>A different surface.</p>
-                <p class="slide-description">An interactive test bench for glass optics, colour, highlights and motion — exploring what a translucent interface can feel like.</p>
-                <a class="slide-more" href="apps/liquidlab/">Explore Liquid Lab <span>↗</span></a>
-              </div>
-              <div class="slide-visual liquid-visual" aria-hidden="true">
-                <div class="liquid-glow"></div><div class="liquid-shape"></div><div class="liquid-orbit"></div>
-                <div class="liquid-caption">LIGHT / SURFACE / MOTION</div>
-              </div>
-            </article>
-          </div>
+          <a class="product-slide slide-liquid" href="apps/liquidlab/" data-slide>
+            <div class="slide-copy"><span class="slide-index">04 / 08</span><span class="slide-category">Visual experiment · Web</span><h3>Liquid Lab</h3><p class="slide-tagline">Glass, light<br>and a little physics.</p><p class="slide-description">An interactive optical test bench exploring refraction, light response and the details behind Liquid Glass.</p><span class="slide-link">Explore Liquid Lab <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><div class="art-fallback"><div class="art-lens"></div></div></div></div>
+          </a>
+
+          <a class="product-slide slide-metro" href="apps/metrolist/" data-slide>
+            <div class="slide-copy"><span class="slide-index">05 / 08</span><span class="slide-category">Music · Android</span><h3>Metrolist Fluid</h3><p class="slide-tagline">A familiar library,<br>reworked.</p><p class="slide-description">A personal Metrolist build with a fluid visual treatment and ColorOS-oriented changes.</p><span class="slide-link">Explore Metrolist <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><img src="https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_2.png" alt="Metrolist music player interface" loading="lazy"></div></div>
+          </a>
+
+          <a class="product-slide slide-bit" href="apps/bitchord/" data-slide>
+            <div class="slide-copy"><span class="slide-index">06 / 08</span><span class="slide-category">Music · Android</span><h3>BitChord FC</h3><p class="slide-tagline">A music player<br>with character.</p><p class="slide-description">A personal fork of BitChord, with a strong visual direction and a growing release trail.</p><span class="slide-link">Explore BitChord <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame cover"><img src="https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png" alt="BitChord FC music player artwork" loading="lazy"></div></div>
+          </a>
+
+          <a class="product-slide slide-dictate" href="apps/dictate/" data-slide>
+            <div class="slide-copy"><span class="slide-index">07 / 08</span><span class="slide-category">Voice typing · Android</span><h3>Dictate Keyboard</h3><p class="slide-tagline">Speak naturally.<br>Keep moving.</p><p class="slide-description">A compiled distribution of the upstream Dictate keyboard, built around speech-to-text and typing.</p><span class="slide-link">Explore Dictate <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><img src="https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_01_en-EN.png" alt="Dictate Keyboard interface" loading="lazy"></div></div>
+          </a>
+
+          <a class="product-slide slide-afuse" href="apps/afusekt/" data-slide>
+            <div class="slide-copy"><span class="slide-index">08 / 08</span><span class="slide-category">Media · Android</span><h3>AfuseKt</h3><p class="slide-tagline">A release shelf<br>for a media player.</p><p class="slide-description">A third-party release archive. The app's source is maintained elsewhere, and no APK is currently attached here.</p><span class="slide-link">Explore AfuseKt <span>↗</span></span></div>
+            <div class="slide-art"><div class="slide-image-frame"><div class="art-fallback"><div class="art-library"><b>YOUR LIBRARY</b><span></span><span></span><span></span><span></span></div></div></div></div>
+          </a>
         </div>
-        <div class="showcase-progress" aria-hidden="true"><span id="slideProgress"></span></div>
-        <p class="showcase-hint"><span>←</span> Swipe to explore <span>→</span></p>
+        <div class="carousel-foot"><div class="carousel-dots" id="carouselDots" aria-label="Choose a project"></div><span>Swipe to explore</span><a href="downloads.html">All applications <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
-    <section class="home-end container fade-up">
-      <div class="home-end-orb"></div>
-      <div class="kicker">The rest of the shelf</div>
-      <h2>See everything<br>in one place.</h2>
-      <p>Explore every public project, open its own page, read what it does and find its latest available download.</p>
-      <a class="button primary" href="downloads.html">Browse all applications <span>↗</span></a>
-      <div class="home-end-foot">A one-person project shelf. Mostly built with AI.</div>
+    <section class="container home-end fade-up" id="about">
+      <div>
+        <div class="kicker">Behind the ideas</div>
+        <h2>One person.<br>A lot of curiosity.<br>A little help from AI.</h2>
+        <p>MangoLoads is where I collect the apps and experiments I work on. I bring the ideas, direction and decisions; AI helps me turn them into working software.</p>
+        <a class="button" href="downloads.html">Find something to try <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="home-end-meta"><strong>Nothing here needs to be bigger than it is.</strong><span>Just useful things, made with care, improved over time and shared when they're ready.</span></div>
     </section>
   </main>
 
-  <footer class="container footer">
+  <footer class="container site-footer">
     <span>© <span data-year></span> MangoLoads</span>
-    <div class="footer-links"><a href="downloads.html">Downloads</a><a href="https://github.com/Batmancpu/mangoloads" target="_blank" rel="noopener noreferrer">Website source</a><a href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#top">Back to top ↑</a></div>
+    <div class="footer-links"><a href="#top">Back to top ↑</a><a href="downloads.html">Downloads</a><a href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
   </footer>
   <script src="site.js" defer></script>
 </body>
