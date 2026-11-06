@@ -354,7 +354,7 @@
 
     <div class="stats" aria-label="Portfolio overview">
       <div class="stat"><strong>08</strong><span>Public repositories reviewed</span></div>
-      <div class="stat"><strong>04</strong><span>Original projects & experiments</span></div>
+      <div class="stat"><strong>03</strong><span>Original projects & experiments</span></div>
       <div class="stat"><strong>∞</strong><span>Room to build what matters</span></div>
     </div>
 
@@ -448,7 +448,7 @@
         tags:["Android","Current affairs","UPSC"], repo:"https://github.com/Batmancpu/CurrentLens", release:"https://github.com/Batmancpu/CurrentLens/releases", action:"Get latest APK"
       },
       {
-        title:"brrrBoard / FrostKeys", label:"Android keyboard · HeliBoard-based fork", kind:"original", status:"Development", tone:"green", icon:"bb", iconClass:"icon-blue",
+        title:"brrrBoard / FrostKeys", label:"Android keyboard · HeliBoard-based fork", kind:"community", status:"Fork + customization", tone:"blue", icon:"bb", iconClass:"icon-blue",
         logo:"https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/icon/FrostKeys_Icon_with_bg.png",
         description:"A personalised keyboard project exploring a frosted-glass interface, typing tools, custom dictionaries, glide input and configurable privacy-aware features.",
         tags:["Android","Keyboard","Frosted glass"], repo:"https://github.com/Batmancpu/brrrBoard", release:"https://github.com/Batmancpu/brrrBoard/releases", action:"View builds"
@@ -502,7 +502,7 @@
       });
       grid.innerHTML = shown.map(p => {
         const logo = p.logo ? '<img src="' + esc(p.logo) + '" alt="" loading="lazy" onerror="this.remove()">' : "";
-        const icon = '<div class="project-icon ' + esc(p.iconClass) + '">' + logo + '<span>' + esc(p.icon) + '</span></div>';
+        const icon = '<div class="project-icon ' + esc(p.iconClass) + '">' + (p.logo ? logo : '<span>' + esc(p.icon) + '</span>') + '</div>';
         const release = p.release ? '<a href="' + esc(p.release) + '" target="_blank" rel="noopener noreferrer">' + esc(p.action) + ' ↗</a>' : '<a href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">' + esc(p.action) + ' ↗</a>';
         const source = p.release ? '<a class="secondary" href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">Source ↗</a>' : '<a class="secondary" href="' + esc(p.repo) + '" target="_blank" rel="noopener noreferrer">GitHub ↗</a>';
         return '<article class="project-card fade-in"><div class="card-head">' + icon + '<span class="status ' + esc(p.tone || "") + '">' + esc(p.status) + '</span></div><span class="card-label">' + esc(p.label) + '</span><h3>' + esc(p.title) + '</h3><p>' + esc(p.description) + '</p><div class="tags">' + p.tags.map(t => '<span class="tag">' + esc(t) + '</span>').join("") + '</div><div class="card-actions">' + release + source + '</div></article>';
