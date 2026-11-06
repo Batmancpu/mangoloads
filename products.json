@@ -1,0 +1,479 @@
+{
+  "generatedAt": "2026-11-06T12:12:00Z",
+  "apps": [
+    {
+      "id": "brrrnews",
+      "title": "brrrNews",
+      "kicker": "CURRENTLENS · ANDROID",
+      "subtitle": "Read beyond the headline.",
+      "intro": "A calmer way to follow current affairs — with stories arranged around context, subjects and the questions worth asking.",
+      "description": "A local-first Android news reader designed around Indian and international journalism, with study tools for people who want to understand the day's events rather than merely scroll past them.",
+      "type": "original",
+      "category": "original",
+      "status": "Public testing",
+      "accent": "mint",
+      "icon": "bn",
+      "iconUrl": "",
+      "repo": "https://github.com/Batmancpu/CurrentLens",
+      "upstream": "",
+      "releaseNote": "Preview build",
+      "heroArt": "news",
+      "heroImage": "",
+      "features": [
+        {
+          "eyebrow": "01 / FIND THE SIGNAL",
+          "title": "A feed with a point of view.",
+          "body": "Today, Explore and Search organise stories around topics and indicative GS syllabus signals. Broad entertainment and routine sports coverage are kept out of the default study feeds.",
+          "points": [
+            "Today and Explore feeds",
+            "Topic and GS-paper filters",
+            "Search by headline, publisher and subject"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "02 / KEEP YOUR PLACE",
+          "title": "Reading that remembers.",
+          "body": "Save stories, keep local read markers and see reading activity in a personal dashboard. Reading time is based on foreground reader sessions, not guesses from a link being opened.",
+          "points": [
+            "Saved stories",
+            "Reading history markers",
+            "Daily and subject-based statistics"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "03 / THINK IT THROUGH",
+          "title": "Practice, not just consumption.",
+          "body": "Short practice flows distinguish comprehension, indicative syllabus mapping and original prompts. A practice prompt is not presented as an official UPSC previous-year question unless its provenance is verified.",
+          "points": [
+            "Five-question practice flow",
+            "Submitted-attempt statistics",
+            "Clear distinction between PYQs and original prompts"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "04 / YOUR DATA STAYS YOURS",
+          "title": "Local-first by design.",
+          "body": "Personal reading markers, saved stories, settings, statistics and caches are stored on the device. There are no accounts, analytics, telemetry or cloud-AI runtime in the documented app build.",
+          "points": [
+            "No account required",
+            "No analytics or telemetry",
+            "Publisher pages remain the source of truth"
+          ],
+          "image": ""
+        }
+      ],
+      "caveat": "The editorial mapping is a conservative keyword-based heuristic, not a validated UPSC relevance score or an exam prediction. Check important claims against the original publisher and the official UPSC syllabus.",
+      "screenshot": "",
+      "tags": [
+        "Android",
+        "Current affairs",
+        "UPSC study",
+        "Local-first"
+      ]
+    },
+    {
+      "id": "brrrboard",
+      "title": "brrrBoard / FrostKeys",
+      "kicker": "KEYBOARD · ANDROID · CUSTOM FORK",
+      "subtitle": "A keyboard with a softer edge.",
+      "intro": "A HeliBoard-derived keyboard project exploring a more expressive frosted-glass interface and a set of practical typing tools.",
+      "description": "A customised fork and visual experiment based on upstream FrostKeys / HeliBoard work. The repository's own documentation describes the frosted-glass interface, typing tools and optional integrations.",
+      "type": "community",
+      "category": "community",
+      "status": "Debug / pre-release",
+      "accent": "blue",
+      "icon": "bb",
+      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/icon/FrostKeys_Icon_with_bg.png",
+      "repo": "https://github.com/Batmancpu/brrrBoard",
+      "upstream": "https://github.com/AshwinSoni-01/FrostKeys",
+      "releaseNote": "Debug build",
+      "heroArt": "keyboard",
+      "heroImage": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_4.png",
+      "features": [
+        {
+          "eyebrow": "01 / THE SURFACE",
+          "title": "A little more atmosphere.",
+          "body": "The project explores translucent surfaces, adjustable blur and a frosted-glass treatment across a familiar keyboard layout.",
+          "points": [
+            "Frosted-glass visual direction",
+            "Customisable appearance",
+            "Android window-blur support varies by device"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_2.png"
+        },
+        {
+          "eyebrow": "02 / THE EVERYDAY TOOLS",
+          "title": "The useful things, close by.",
+          "body": "The upstream documentation describes an access-point menu for settings, clipboard and one-handed use, alongside a media panel and typing utilities.",
+          "points": [
+            "Clipboard and toolbar access",
+            "GIF and sticker panel",
+            "Custom dictionaries and glide typing"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_3.png"
+        },
+        {
+          "eyebrow": "03 / YOUR CHOICE",
+          "title": "Optional means optional.",
+          "body": "The documented fork includes optional network-powered integrations and user-supplied keys. Review the repository's privacy and permissions notes before enabling connected features.",
+          "points": [
+            "Optional online integrations",
+            "User-controlled settings",
+            "Source and build history available on GitHub"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_5.png"
+        }
+      ],
+      "caveat": "This is a personal fork of upstream FrostKeys / HeliBoard, not the official upstream release. The repository warns that unofficial keyboard APKs can process sensitive input and should not be casually sideloaded. Verify the signing identity and source before installing.",
+      "screenshot": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_1.png",
+      "tags": [
+        "Android",
+        "Keyboard",
+        "Frosted glass",
+        "Upstream fork"
+      ]
+    },
+    {
+      "id": "expboard",
+      "title": "expBoard",
+      "kicker": "EXPMANGO · ANDROID · ORIGINAL PROTOTYPE",
+      "subtitle": "Typing that stays out of the way.",
+      "intro": "A small keyboard experiment for fast English and Hinglish typing, adaptive vocabulary and privacy-aware behaviour.",
+      "description": "A lightweight, local-first Android keyboard prototype built around deterministic suggestions and fast response rather than heavyweight inference on the keystroke path.",
+      "type": "original",
+      "category": "original",
+      "status": "Prototype build",
+      "accent": "amber",
+      "icon": "ex",
+      "iconUrl": "",
+      "repo": "https://github.com/Batmancpu/expmango",
+      "upstream": "",
+      "releaseNote": "Debug build",
+      "heroArt": "keyboard-simple",
+      "heroImage": "",
+      "features": [
+        {
+          "eyebrow": "01 / QUICK RESPONSE",
+          "title": "Suggestions without the wait.",
+          "body": "A prefix trie and conservative typo correction support predictable suggestions. The typing path is designed not to wait for network requests, disk I/O or a neural model.",
+          "points": [
+            "Prefix-trie lookup",
+            "Conservative typo correction",
+            "No heavyweight model on the keystroke path"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "02 / LEARN YOUR WORDS",
+          "title": "English, Hinglish and your vocabulary.",
+          "body": "The prototype includes English and Hinglish vocabulary, personal word learning and bigram learning to adapt to the words and phrases you actually use.",
+          "points": [
+            "English and Hinglish vocabulary",
+            "Personal word learning",
+            "Bigram-based phrase learning"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "03 / PRIVACY",
+          "title": "Small by design.",
+          "body": "The project README describes no network permission, no persistent background service and asynchronous persistence while the keyboard is active.",
+          "points": [
+            "No network permission in the prototype",
+            "No persistent background service",
+            "Asynchronous learning and persistence"
+          ],
+          "image": ""
+        }
+      ],
+      "caveat": "expBoard is an early prototype. The downloadable APK is a debug build; expect incomplete features and compatibility changes.",
+      "screenshot": "",
+      "tags": [
+        "Android",
+        "Hinglish",
+        "Offline-first",
+        "Keyboard"
+      ]
+    },
+    {
+      "id": "liquidlab",
+      "title": "Liquid Lab",
+      "kicker": "LIQUID · INTERACTIVE WEB EXPERIMENT",
+      "subtitle": "Glass, light and a little physics.",
+      "intro": "An interactive laboratory for refraction, edge highlights, ambient colour and the behaviour of translucent interfaces.",
+      "description": "A React and TypeScript experiment porting Liquid Glass optics and ambient illumination concepts into a browser-based visual test bench.",
+      "type": "original",
+      "category": "experiments",
+      "status": "Visual experiment",
+      "accent": "violet",
+      "icon": "✧",
+      "iconUrl": "",
+      "repo": "https://github.com/Batmancpu/liquid",
+      "upstream": "",
+      "releaseNote": "Experimental package",
+      "heroArt": "liquid",
+      "heroImage": "",
+      "features": [
+        {
+          "eyebrow": "01 / OPTICS",
+          "title": "More than a blur.",
+          "body": "The lab explores edge curvature distortion, chromatic dispersion, Fresnel-like rim response and specular highlights driven by virtual light.",
+          "points": [
+            "Rounded-rectangle optical model",
+            "Chromatic edge dispersion",
+            "Light-reactive highlights"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "02 / SHAPES",
+          "title": "One surface, many forms.",
+          "body": "An interactive bench tests different shapes such as short pills, keyboard cards, circular lenses, dock bars and squircles.",
+          "points": [
+            "Pills and rounded cards",
+            "Circular lenses",
+            "Dock bars and squircles"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "03 / AMBIENT LIGHT",
+          "title": "An interface that responds.",
+          "body": "The experiment includes virtual light and gravity controls, colour haze presets, motion input where supported and a battery-saver dimming mode.",
+          "points": [
+            "Light and gravity simulation",
+            "Colour haze presets",
+            "Device-orientation support where available"
+          ],
+          "image": ""
+        }
+      ],
+      "caveat": "This repository is an experimental visual laboratory. The APK attached to its release is an experimental package, not a stable consumer app.",
+      "screenshot": "",
+      "tags": [
+        "React",
+        "TypeScript",
+        "Web experiment",
+        "Liquid Glass"
+      ]
+    },
+    {
+      "id": "metrolist",
+      "title": "Metrolist Fluid",
+      "kicker": "METROLIST · ANDROID · PERSONAL FORK",
+      "subtitle": "A familiar music library, reworked.",
+      "intro": "A personal ColorOS-oriented build of the open-source Metrolist YouTube Music client, with a fluid visual treatment.",
+      "description": "A customised upstream fork of Metrolist. The project focuses on a personalised visual experience while remaining separate from the original Metrolist release.",
+      "type": "community",
+      "category": "community",
+      "status": "Pre-release fork",
+      "accent": "amber",
+      "icon": "ml",
+      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/icon.png",
+      "repo": "https://github.com/Batmancpu/Metrolist",
+      "upstream": "https://github.com/MetrolistGroup/Metrolist",
+      "releaseNote": "Personal pre-release build",
+      "heroArt": "music",
+      "heroImage": "https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_2.png",
+      "features": [
+        {
+          "eyebrow": "01 / THE LIBRARY",
+          "title": "Music, organised your way.",
+          "body": "Metrolist is an Android YouTube Music client. This fork carries the upstream library experience into a personal build with a fluid ColorOS-inspired treatment.",
+          "points": [
+            "Android music client",
+            "Personal visual customisation",
+            "Upstream project attribution"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_1.png"
+        },
+        {
+          "eyebrow": "02 / THE EXPERIENCE",
+          "title": "A softer visual language.",
+          "body": "The fork's stated focus is a fluid visual treatment. Screenshots show the personalised interface; availability and compatibility can change between builds.",
+          "points": [
+            "Fluid visual treatment",
+            "ColorOS-oriented build",
+            "Release history kept on GitHub"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_3.png"
+        }
+      ],
+      "caveat": "This is a personal fork, not an official MetrolistGroup build. The upstream README reports maintenance mode and notes regional availability restrictions for YouTube Music. Use only where the service is available and in accordance with its terms.",
+      "screenshot": "https://raw.githubusercontent.com/Batmancpu/Metrolist/main/fastlane/metadata/android/en-US/images/screenshots/screenshot_4.png",
+      "tags": [
+        "Android",
+        "Music",
+        "YouTube Music client",
+        "Fork"
+      ]
+    },
+    {
+      "id": "bitchord",
+      "title": "BitChord FC",
+      "kicker": "Bitchordfc · ANDROID · PERSONAL FORK",
+      "subtitle": "A music player with a little more character.",
+      "intro": "A personalised fork of BitChord, an Android music client whose visual direction takes cues from Apple Music.",
+      "description": "The repository contains a personal fork of BitChord. Its upstream documentation describes playback, library, lyrics, theming and connectivity features; the exact fork build may differ.",
+      "type": "community",
+      "category": "community",
+      "status": "Pre-release fork",
+      "accent": "violet",
+      "icon": "bc",
+      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Logo.png",
+      "repo": "https://github.com/Batmancpu/Bitchordfc",
+      "upstream": "https://github.com/kushagrasinghx/BitChord",
+      "releaseNote": "Pre-release build",
+      "heroArt": "music",
+      "heroImage": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png",
+      "features": [
+        {
+          "eyebrow": "01 / LISTEN",
+          "title": "Your music, in one place.",
+          "body": "The upstream BitChord project documents YouTube Music browsing, local-library integration, background playback and offline downloads. This fork's exact feature set follows its own source and release notes.",
+          "points": [
+            "Music discovery and browsing",
+            "Local library integration",
+            "Background playback and offline downloads"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png"
+        },
+        {
+          "eyebrow": "02 / MAKE IT YOURS",
+          "title": "Artwork sets the mood.",
+          "body": "The upstream project describes artwork-driven theming, animated album visuals and synchronised lyrics. The fork's interface and behaviour can diverge from upstream.",
+          "points": [
+            "Artwork-driven theming",
+            "Lyrics integrations",
+            "Fluid visual treatment"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Logo.png"
+        }
+      ],
+      "caveat": "This is a personal fork of BitChord, not an official upstream release. The current APK is a pre-release build and is unusually large (about 193 MB); review its release notes before downloading.",
+      "screenshot": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png",
+      "tags": [
+        "Android",
+        "Music player",
+        "Lyrics",
+        "Fork"
+      ]
+    },
+    {
+      "id": "dictate",
+      "title": "Dictate Keyboard",
+      "kicker": "DICTATOR- · COMPILED UPSTREAM PROJECT",
+      "subtitle": "Speak. It becomes text.",
+      "intro": "A voice-first keyboard distribution centred on speech-to-text, with a choice of cloud and on-device transcription engines.",
+      "description": "This repository is a compiled distribution of the upstream Dictate Keyboard project. The repository owner explicitly credits the original developer and describes the APK as compiled rather than independently authored.",
+      "type": "community",
+      "category": "community",
+      "status": "Compiled release",
+      "accent": "blue",
+      "icon": "dk",
+      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/Icon_512x512_2_round.png",
+      "repo": "https://github.com/Batmancpu/Dictator-",
+      "upstream": "https://github.com/DevEmperor/DictateKeyboard",
+      "releaseNote": "Compiled upstream release",
+      "heroArt": "dictate",
+      "heroImage": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_01_en-EN.png",
+      "features": [
+        {
+          "eyebrow": "01 / VOICE INPUT",
+          "title": "Say it naturally.",
+          "body": "The upstream app is designed to transcribe speech into text for use across Android apps, with punctuation and real-time transcription where the selected provider supports it.",
+          "points": [
+            "Voice dictation",
+            "Real-time transcription on supported providers",
+            "System-wide keyboard integration"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_02_en-EN.png"
+        },
+        {
+          "eyebrow": "02 / CHOOSE YOUR ENGINE",
+          "title": "Cloud or on-device.",
+          "body": "The upstream project documents several selectable speech providers as well as downloadable on-device models. Provider availability, API keys, model size and device performance vary.",
+          "points": [
+            "Selectable transcription providers",
+            "On-device model options",
+            "User-supplied provider configuration"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_03_en-EN.png"
+        },
+        {
+          "eyebrow": "03 / MORE THAN DICTATION",
+          "title": "A complete keyboard too.",
+          "body": "The upstream project also describes glide typing, next-word prediction, autocorrection and configurable rewording prompts.",
+          "points": [
+            "Glide typing",
+            "Autocorrection and suggestions",
+            "Custom rewording prompts"
+          ],
+          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_06_en-EN.png"
+        }
+      ],
+      "caveat": "This repository is a compiled distribution of DevEmperor's upstream project, not an original MangoLoads application. Cloud transcription can send audio to the selected provider; review its privacy policy and your configured provider before use.",
+      "screenshot": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_04_en-EN.png",
+      "tags": [
+        "Android",
+        "Speech-to-text",
+        "Voice typing",
+        "Compiled distribution"
+      ]
+    },
+    {
+      "id": "afusekt",
+      "title": "AfuseKt",
+      "kicker": "INFUSEKT-RELEASE · RELEASE ARCHIVE",
+      "subtitle": "A media player release shelf.",
+      "intro": "A repository that mirrors release information for the upstream AfuseKt media player.",
+      "description": "This repository is a release-only archive; its README states that it does not contain application source code. No APK asset is currently attached to a GitHub Release in this repository.",
+      "type": "community",
+      "category": "community",
+      "status": "No APK attached",
+      "accent": "blue",
+      "icon": "af",
+      "iconUrl": "",
+      "repo": "https://github.com/Batmancpu/InfuseKt-release",
+      "upstream": "https://github.com/AttemptD/AfuseKt-release",
+      "releaseNote": "Release archive",
+      "heroArt": "archive",
+      "heroImage": "",
+      "features": [
+        {
+          "eyebrow": "01 / THE ARCHIVE",
+          "title": "A pointer to upstream work.",
+          "body": "The repository README describes AfuseKt as an Android media player and explains that this repository is intended for release distribution rather than source development.",
+          "points": [
+            "Release-only repository",
+            "Upstream application attribution",
+            "Source is maintained elsewhere"
+          ],
+          "image": ""
+        },
+        {
+          "eyebrow": "02 / AVAILABILITY",
+          "title": "No direct APK at this time.",
+          "body": "No GitHub Release with an attached APK is currently available in this repository. The source and release archive can be reviewed on GitHub.",
+          "points": [
+            "No verified APK asset",
+            "Repository link available",
+            "No fabricated download button"
+          ],
+          "image": ""
+        }
+      ],
+      "caveat": "This is a third-party release archive. No APK is currently available from its GitHub Releases list, so this page does not provide a one-click installer.",
+      "screenshot": "",
+      "tags": [
+        "Android",
+        "Media player",
+        "Release archive",
+        "Upstream project"
+      ]
+    }
+  ]
+}
