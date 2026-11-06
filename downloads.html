@@ -3,61 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080a0f">
-  <meta name="description" content="Download the latest MangoLoads Android apps and experimental builds directly from GitHub Releases.">
+  <meta name="theme-color" content="#f5f4f0">
+  <meta name="description" content="Browse every MangoLoads app, prototype and project. Open each product page for features, releases and the latest available build.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Downloads — MangoLoads">
-  <meta property="og:description" content="Latest builds, release dates and direct APK downloads.">
-  <title>Downloads — MangoLoads</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Applications — MangoLoads">
+  <meta property="og:description" content="Every app. Its own page. The latest available build.">
+  <title>Applications — MangoLoads</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="downloads-page">
   <header class="topbar">
     <a class="brand" href="index.html" aria-label="MangoLoads home">
-      <span class="brand-mark">m.</span>
-      <span class="brand-name">MangoLoads<span> / downloads</span></span>
+      <span class="brand-mark">m.</span><span class="brand-name">MangoLoads</span>
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="index.html#work">Projects</a>
-      <a href="index.html#approach">Approach</a>
+      <a href="index.html">Home</a>
+      <a href="downloads.html" class="nav-cta" aria-current="page">Applications</a>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">◐</button>
-      <a class="nav-cta" href="downloads.html" aria-current="page">Downloads <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
-  <main class="container" id="top">
+  <main class="container">
     <section class="page-hero fade-up">
-      <div class="eyebrow">The release shelf · Direct from GitHub</div>
-      <h1>Everything you need.<br><span class="gradient-text">One click away.</span></h1>
-      <p>Browse the latest published APKs for MangoLoads projects and personal builds. Version details are checked against GitHub Releases, and each download goes directly to its release asset.</p>
+      <div class="eyebrow">The applications</div>
+      <h1>Find something<br><span class="gradient-text">you'd like to use.</span></h1>
+      <p>Every public project, in one place. Open an application to see what it does, explore its features and find the newest available build.</p>
       <div class="page-meta">
-        <span class="meta-pill">No account required</span>
-        <span class="meta-pill">Hosted by GitHub</span>
-        <span class="meta-pill">Latest published build</span>
+        <span class="meta-pill">8 public projects</span>
+        <span class="meta-pill">Latest releases checked on GitHub</span>
+        <span class="meta-pill">Free to browse</span>
       </div>
     </section>
 
     <div class="download-tools fade-up">
-      <div class="filter-row" role="group" aria-label="Filter downloads">
-        <button type="button" class="filter active" data-download-filter="all">All builds</button>
-        <button type="button" class="filter" data-download-filter="original">Original projects</button>
+      <div class="filter-row" role="group" aria-label="Filter applications">
+        <button type="button" class="filter active" data-download-filter="all">All applications</button>
+        <button type="button" class="filter" data-download-filter="original">Original work</button>
         <button type="button" class="filter" data-download-filter="experiments">Experiments</button>
         <button type="button" class="filter" data-download-filter="community">Forks & archives</button>
       </div>
-      <div class="data-status" id="releaseStatus" role="status" aria-live="polite">Loading release information…</div>
+      <label class="search" aria-label="Search applications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+        <input id="downloadSearch" type="search" placeholder="Search applications…" autocomplete="off">
+      </label>
     </div>
 
     <div class="download-grid" id="downloadGrid" aria-live="polite"></div>
-    <div class="no-results" id="noDownloads">No builds match this filter.</div>
+    <div class="no-results" id="noDownloads">No applications match that search.</div>
+    <div class="data-status download-status" id="releaseStatus" role="status" aria-live="polite">Loading release information…</div>
 
     <div class="download-disclaimer notice fade-up">
-      <strong>Before installing:</strong> Several packages below are preview, debug or pre-release builds; others are personal forks or compiled distributions of upstream projects. They are not necessarily stable or endorsed by the original developers. Review the release notes and source repository before installing. Keyboard apps can process sensitive text, so install them only when you trust the source and signing identity.
+      <strong>About builds:</strong> Some downloads are debug, preview or pre-release packages; some are personal forks or compiled distributions of upstream projects. They are not necessarily stable or endorsed by the original developers. Each application page explains its status and links to its source. For keyboard apps in particular, verify the source and signing identity before installing.
     </div>
   </main>
 
   <footer class="container footer">
-    <span>© <span data-year></span> MangoLoads. Builds are hosted by GitHub.</span>
+    <span>© <span data-year></span> MangoLoads</span>
     <div class="footer-links"><a href="index.html">Home</a><a href="https://github.com/Batmancpu/mangoloads" target="_blank" rel="noopener noreferrer">Website source</a><a href="https://github.com/Batmancpu" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#top">Back to top ↑</a></div>
   </footer>
   <script src="site.js" defer></script>
