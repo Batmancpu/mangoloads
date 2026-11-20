@@ -37,7 +37,14 @@ These were snapshots, not guarantees of the current latest version for future da
 - Confirmed live brrBoard primary download points to `https://github.com/Batmancpu/brrrBoard/releases/download/v1.0.186/brrBoard.apk`.
 - Confirmed the live brrBoard history lists eight signed versions: `v1.0.186`, `v1.0.183`, `v1.0.182`, `v1.0.178`, `v1.0.177`, `v1.0.176`, `v1.0.173`, `v1.0.172`; debug CI artifacts do not appear.
 - Confirmed brrMusic and brrSpeak public APK links and current display names.
-- Syntax, JSON and Git diff checks should be rerun immediately before commit. After publishing, verify the live GitHub Pages endpoint and note any deployment lag.
+- `node --check` passed for `site.js`, `premium.js`, `downloads.js` and `product-page.js`; both JSON files parsed successfully; `git diff --check` passed; an automated local-link audit resolved 145 internal references across 12 HTML pages.
+
+### Publication / live verification
+
+- Published to the existing `Batmancpu/mangoloads` **`main`** branch on 20 November 2026. The website-content commit is [`0b8b8fa`](https://github.com/Batmancpu/mangoloads/commit/0b8b8fabf2c63a1674fc70dc0c87496996b53594), applied through the authenticated GitHub integration after the shell's `git push` lacked HTTPS credentials. No new branch, replacement hosting project or force update was used. The remote tree SHA `4b0c1b690fcb8a174c572ca64c7fdac5768df2ae` matched the locally reviewed tree exactly.
+- Verified the public homepage live at https://batmancpu.github.io/mangoloads/ with the new sapphire artwork, approved brrBoard mango badge, premium stylesheet, and `v1.0.186` build display.
+- Verified the published `/apps/brrrboard/` page loaded its official artwork, pointed to the correct signed APK, displayed the install guide and eight non-debug release entries, with no desktop horizontal overflow.
+- Verified both new published routes `/apps/brrmusic/` and `/apps/brrspeak/` loaded with the correct titles. The temporary preview `dist/` tree and `.openai/hosting.json` were not committed.
 
 ### Caveats / future work
 
