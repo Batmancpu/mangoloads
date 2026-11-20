@@ -4,7 +4,7 @@
   const status=document.getElementById("releaseStatus");
   const empty=document.getElementById("noDownloads");
   const search=document.getElementById("downloadSearch");
-  const cacheKey="mangoloads.release-catalogue.v5";
+  const cacheKey="mangoloads.release-catalogue.v6";
   const cacheAge=20*60*1000;
   let applications=[];
   let activeFilter="all";
@@ -17,7 +17,7 @@
     if(Number.isNaN(d.getTime()))return "Date unavailable";
     return new Intl.DateTimeFormat("en-IN",{day:"numeric",month:"short",year:"numeric",timeZone:"Asia/Kolkata"}).format(d);
   };
-  const detailUrl=app=>"apps/"+encodeURIComponent(app.id)+"/";
+  const detailUrl=app=>"apps/"+encodeURIComponent(({bitchord:"brrmusic",dictate:"brrspeak"})[app.id]||app.id)+"/";
   const category=app=>app.id==="liquidlab"?"experiments":(app.category||app.type||"community");
 
   function render(){
@@ -57,12 +57,13 @@
     if(empty)empty.style.display=visible.length?"none":"block";
   }
 
-  function newestApk(releases){
+  function newestApk(releases,app){
     if(!Array.isArray(releases))return null;
     const candidates=[];
     releases.forEach(release=>{
       if(!release||release.draft||!Array.isArray(release.assets))return;
-      release.assets.filter(asset=>asset&&asset.browser_download_url&&/\.apk$/i.test(asset.name||""))
+      if(app.id==="brrrboard"&&(release.prerelease||!/^v1\.0\.\d+$/.test(release.tag_name||"")))return;
+      release.assets.filter(asset=>asset&&asset.browser_download_url&&(app.id==="brrrboard"?asset.name==="brrBoard.apk":/\.apk$/i.test(asset.name||"")))
         .forEach(asset=>candidates.push({release,asset}));
     });
     candidates.sort((a,b)=>(Date.parse(b.release.published_at||b.release.created_at||"")||0)-(Date.parse(a.release.published_at||a.release.created_at||"")||0));
@@ -84,7 +85,7 @@
       if(!repo.startsWith("Batmancpu/"))return app;
       const response=await fetch("https://api.github.com/repos/"+repo+"/releases?per_page=100",{headers:{"Accept":"application/vnd.github+json"},cache:"no-store"});
       if(!response.ok)throw new Error("GitHub API "+response.status);
-      const release=newestApk(await response.json());
+      const release=newestApk(await response.json(),app);
       if(!release)return Object.assign({},app,{build:{assetUrl:"",assetName:"",assetBytes:0,releaseTag:"",publishedAt:"",prerelease:false}});
       return Object.assign({},app,{build:{
         assetUrl:release.asset.browser_download_url,assetName:release.asset.name,assetBytes:release.asset.size||0,

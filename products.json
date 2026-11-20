@@ -76,63 +76,77 @@
     },
     {
       "id": "brrrboard",
-      "title": "brrrBoard / FrostKeys",
-      "kicker": "KEYBOARD · ANDROID · CUSTOM FORK",
-      "subtitle": "A keyboard with a softer edge.",
-      "intro": "A HeliBoard-derived keyboard project exploring a more expressive frosted-glass interface and a set of practical typing tools.",
-      "description": "A customised fork and visual experiment based on upstream FrostKeys / HeliBoard work. The repository's own documentation describes the frosted-glass interface, typing tools and optional integrations.",
+      "title": "brrBoard",
+      "kicker": "BY MANGOLOADS · ANDROID KEYBOARD",
+      "subtitle": "Your keyboard, thoughtfully made.",
+      "intro": "A fast, local-first Android keyboard with an unmistakable blue-and-mango identity, a considered frosted interface and useful everyday tools.",
+      "description": "A fast, local-first keyboard built on FrostKeys, HeliBoard and AOSP LatinIME foundations. Frosted surfaces, English and Hinglish typing, personal suggestions, searchable Emoji, private Clipboard tools and optional offline voice bring the essentials together.",
       "type": "community",
       "category": "community",
-      "status": "Debug / pre-release",
+      "status": "Active public releases",
       "accent": "blue",
       "icon": "bb",
-      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/icon/FrostKeys_Icon_with_bg.png",
+      "iconUrl": "assets/visuals/brrboard-brand.webp",
       "repo": "https://github.com/Batmancpu/brrrBoard",
       "upstream": "https://github.com/AshwinSoni-01/FrostKeys",
-      "releaseNote": "Debug build",
+      "releaseNote": "Original-signed GitHub release",
       "heroArt": "keyboard",
-      "heroImage": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_4.png",
+      "heroImage": "../../assets/visuals/brrboard-identity.webp",
       "features": [
         {
-          "eyebrow": "01 / THE SURFACE",
-          "title": "A little more atmosphere.",
-          "body": "The project explores translucent surfaces, adjustable blur and a frosted-glass treatment across a familiar keyboard layout.",
+          "eyebrow": "MATERIALS AND FEEL",
+          "title": "Every key deserves care.",
+          "body": "Adjustable frosted-glass surfaces, carefully separated key roles and a responsive layout keep the experience expressive without adding heavy animation to each keystroke.",
           "points": [
-            "Frosted-glass visual direction",
-            "Customisable appearance",
-            "Android window-blur support varies by device"
+            "Adjustable frosted-glass appearance",
+            "Control your appearance and layout",
+            "Blur and translucency depend on Android device support"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_2.png"
+          "image": ""
         },
         {
-          "eyebrow": "02 / THE EVERYDAY TOOLS",
-          "title": "The useful things, close by.",
-          "body": "The upstream documentation describes an access-point menu for settings, clipboard and one-handed use, alongside a media panel and typing utilities.",
+          "eyebrow": "LOCAL TYPING INTELLIGENCE",
+          "title": "The next word comes naturally.",
+          "body": "English and Hinglish layouts, suggestions and a personal dictionary work locally. Gesture typing can use a separately imported compatible offline library; the standard APK does not include it automatically.",
           "points": [
-            "Clipboard and toolbar access",
-            "GIF and sticker panel",
-            "Custom dictionaries and glide typing"
+            "English and Hinglish vocabulary",
+            "Personal word and phrase learning",
+            "Optional import-based swipe typing"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_3.png"
+          "image": ""
         },
         {
-          "eyebrow": "03 / YOUR CHOICE",
-          "title": "Optional means optional.",
-          "body": "The documented fork includes optional network-powered integrations and user-supplied keys. Review the repository's privacy and permissions notes before enabling connected features.",
+          "eyebrow": "EVERYDAY SHORTCUTS",
+          "title": "Little tools, exactly where you need them.",
+          "body": "Searchable Emoji, locally stored Clipboard history and practical toolbar controls live close to the keys, with privacy handling for sensitive editors.",
           "points": [
-            "Optional online integrations",
-            "User-controlled settings",
-            "Source and build history available on GitHub"
+            "Emoji Search and Smart Recents",
+            "Local Clipboard history and search",
+            "Incognito and protected-field safeguards"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_5.png"
+          "image": ""
+        },
+        {
+          "eyebrow": "INTENTIONAL VOICE",
+          "title": "Speak, with your phone doing the listening.",
+          "body": "The built-in blue offline dictation path uses a privately provisioned English recognition model. Recording is deliberate, processing stays on-device, and ordinary update APKs reuse the installed model rather than bundling it repeatedly.",
+          "points": [
+            "No Android internet permission for brrBoard",
+            "Offline model must be provisioned separately through a signed bootstrap release",
+            "Ongoing voice recovery and reliability work"
+          ],
+          "image": ""
         }
       ],
-      "caveat": "This is a personal fork of upstream FrostKeys / HeliBoard, not the official upstream release. The repository warns that unofficial keyboard APKs can process sensitive input and should not be casually sideloaded. Verify the signing identity and source before installing.",
-      "screenshot": "https://raw.githubusercontent.com/Batmancpu/brrrBoard/main/assets/screenshots/Screenshot_1.png",
+      "caveat": "This is a MangoLoads continuation of FrostKeys / HeliBoard, not an official upstream release. Android keyboards can process sensitive text: review the privacy policy and verify the signing identity. The current package com.mangoloads.board cannot update the older com.orion.frostkeys.brrrboard package in place. Product artwork is not a current keyboard screenshot; device acceptance is ongoing.",
+      "screenshot": "",
       "tags": [
         "Android",
         "Keyboard",
         "Frosted glass",
+        "Local-first",
+        "English and Hinglish",
+        "Offline voice option",
         "Upstream fork"
       ]
     },
@@ -313,115 +327,104 @@
     },
     {
       "id": "bitchord",
-      "title": "BitChord FC",
-      "kicker": "Bitchordfc · ANDROID · PERSONAL FORK",
-      "subtitle": "A music player with a little more character.",
-      "intro": "A personalised fork of BitChord, an Android music client whose visual direction takes cues from Apple Music.",
-      "description": "The repository contains a personal fork of BitChord. Its upstream documentation describes playback, library, lyrics, theming and connectivity features; the exact fork build may differ.",
+      "title": "brrMusic",
+      "kicker": "BY MANGOLOADS · ANDROID MUSIC",
+      "subtitle": "Music, with more room to breathe.",
+      "intro": "An independent Android music-player fork with a fluid identity, thoughtful audio controls and a more personal listening experience.",
+      "description": "Built on Zenith and BitChord foundations, brrMusic explores adaptive stereo widening, crossfeed, carefully controlled audio refinements and ColorOS Fluid Cloud integration.",
       "type": "community",
       "category": "community",
-      "status": "Pre-release fork",
+      "status": "Active public releases",
       "accent": "violet",
       "icon": "bc",
-      "iconUrl": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Logo.png",
-      "repo": "https://github.com/Batmancpu/Bitchordfc",
-      "upstream": "https://github.com/kushagrasinghx/BitChord",
-      "releaseNote": "Pre-release build",
+      "iconUrl": "",
+      "repo": "https://github.com/Batmancpu/brrMusic",
+      "upstream": "https://github.com/rezapranata089-bit/Zenith",
+      "releaseNote": "Active signed release",
       "heroArt": "music",
-      "heroImage": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png",
+      "heroImage": "https://raw.githubusercontent.com/Batmancpu/brrMusic/main/.github/assets/brrmusic-banner.svg",
       "features": [
         {
-          "eyebrow": "01 / LISTEN",
-          "title": "Your music, in one place.",
-          "body": "The upstream BitChord project documents YouTube Music browsing, local-library integration, background playback and offline downloads. This fork's exact feature set follows its own source and release notes.",
+          "eyebrow": "A MORE PERSONAL SOUNDSTAGE",
+          "title": "Give the music more space.",
+          "body": "Optional adaptive spatial audio uses stereo widening and crossfeed, with local per-track On/Off feedback to guide the automatic policy. It is not Dolby Atmos or object-based surround.",
           "points": [
-            "Music discovery and browsing",
-            "Local library integration",
-            "Background playback and offline downloads"
+            "Per-track manual and automatic controls",
+            "No stored raw audio samples in the learning system",
+            "Safety bypasses for unsuitable output paths"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png"
+          "image": ""
         },
         {
-          "eyebrow": "02 / MAKE IT YOURS",
-          "title": "Artwork sets the mood.",
-          "body": "The upstream project describes artwork-driven theming, animated album visuals and synchronised lyrics. The fork's interface and behaviour can diverge from upstream.",
+          "eyebrow": "A FLUID EXPERIENCE",
+          "title": "Made for the details you notice.",
+          "body": "The active brrMusic release has reversible audio-processing refinements, a distinct visual identity and ColorOS-oriented integration where the device supports it.",
           "points": [
-            "Artwork-driven theming",
-            "Lyrics integrations",
-            "Fluid visual treatment"
+            "Experimental, reversible audio refinements",
+            "Fluid Cloud support on compatible devices",
+            "Release notes and source history on GitHub"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Logo.png"
+          "image": ""
         }
       ],
-      "caveat": "This is a personal fork of BitChord, not an official upstream release. The current APK is a pre-release build and is unusually large (about 193 MB); review its release notes before downloading.",
-      "screenshot": "https://raw.githubusercontent.com/Batmancpu/Bitchordfc/main/Banner.png",
+      "caveat": "brrMusic is an independent fork of Zenith, itself based on BitChord. Spatial processing is stereo enhancement, not Dolby Atmos; sonic preferences and integration compatibility vary by device. Review the source and release notes before installing.",
+      "screenshot": "",
       "tags": [
         "Android",
         "Music player",
-        "Lyrics",
+        "Adaptive Spatial Audio",
         "Fork"
       ]
     },
     {
       "id": "dictate",
-      "title": "Dictate Keyboard",
-      "kicker": "DICTATOR- · COMPILED UPSTREAM PROJECT",
-      "subtitle": "Speak. It becomes text.",
-      "intro": "A voice-first keyboard distribution centred on speech-to-text, with a choice of cloud and on-device transcription engines.",
-      "description": "This repository is a compiled distribution of the upstream Dictate Keyboard project. The repository owner explicitly credits the original developer and describes the APK as compiled rather than independently authored.",
+      "title": "brrSpeak",
+      "kicker": "MANGOLOADS · VOICE INTEGRATION EXPERIMENT",
+      "subtitle": "A voice experiment. Built to learn.",
+      "intro": "A separate, experimental speech-recognition companion for Android, based on DevEmperor's Dictate Keyboard.",
+      "description": "brrSpeak explores a privacy-conscious record-first audio handoff from brrBoard to a separate speech recognition service, with its own app identity and device compatibility testing.",
       "type": "community",
       "category": "community",
-      "status": "Compiled release",
+      "status": "Experimental test releases",
       "accent": "blue",
-      "icon": "dk",
+      "icon": "bs",
       "iconUrl": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/Icon_512x512_2_round.png",
       "repo": "https://github.com/Batmancpu/Dictator-",
       "upstream": "https://github.com/DevEmperor/DictateKeyboard",
-      "releaseNote": "Compiled upstream release",
+      "releaseNote": "Experimental companion APK",
       "heroArt": "dictate",
-      "heroImage": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_01_en-EN.png",
+      "heroImage": "",
       "features": [
         {
-          "eyebrow": "01 / VOICE INPUT",
-          "title": "Say it naturally.",
-          "body": "The upstream app is designed to transcribe speech into text for use across Android apps, with punctuation and real-time transcription where the selected provider supports it.",
+          "eyebrow": "EXPERIMENTAL AUDIO HANDOFF",
+          "title": "An audio route worth exploring.",
+          "body": "brrSpeak exposes a separate receiver designed to accept microphone audio securely from brrBoard without opening its own microphone. Integration depends on Android and OEM process-lifecycle behavior, and device verification is ongoing.",
           "points": [
-            "Voice dictation",
-            "Real-time transcription on supported providers",
-            "System-wide keyboard integration"
+            "16 kHz mono audio descriptor handoff",
+            "Verified caller package UID",
+            "No editor or Clipboard reads by the receiver"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_02_en-EN.png"
+          "image": ""
         },
         {
-          "eyebrow": "02 / CHOOSE YOUR ENGINE",
-          "title": "Cloud or on-device.",
-          "body": "The upstream project documents several selectable speech providers as well as downloadable on-device models. Provider availability, API keys, model size and device performance vary.",
+          "eyebrow": "BASED ON DICTATE",
+          "title": "The familiar engines, in a separate test app.",
+          "body": "The fork reuses upstream Dictate transcription providers and language settings for its tests. This is a separate application, not an official Dictate build or a required component of brrBoard's current offline microphone path.",
           "points": [
-            "Selectable transcription providers",
-            "On-device model options",
-            "User-supplied provider configuration"
+            "Own Android package com.mangoloads.speak",
+            "Provider and language selection through the app",
+            "Compatibility experiments remain reversible"
           ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_03_en-EN.png"
-        },
-        {
-          "eyebrow": "03 / MORE THAN DICTATION",
-          "title": "A complete keyboard too.",
-          "body": "The upstream project also describes glide typing, next-word prediction, autocorrection and configurable rewording prompts.",
-          "points": [
-            "Glide typing",
-            "Autocorrection and suggestions",
-            "Custom rewording prompts"
-          ],
-          "image": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_06_en-EN.png"
+          "image": ""
         }
       ],
-      "caveat": "This repository is a compiled distribution of DevEmperor's upstream project, not an original MangoLoads application. Cloud transcription can send audio to the selected provider; review its privacy policy and your configured provider before use.",
-      "screenshot": "https://raw.githubusercontent.com/Batmancpu/Dictator-/main/img/banner_04_en-EN.png",
+      "caveat": "Experimental fork of DevEmperor's Dictate Keyboard. Partial tests succeeded only while brrSpeak was open; cold-start integration still needs real-device confirmation. Experimental signing may change between builds. Cloud provider choices can transmit audio; review their privacy terms before use.",
+      "screenshot": "",
       "tags": [
         "Android",
         "Speech-to-text",
-        "Voice typing",
-        "Compiled distribution"
+        "Audio handoff",
+        "Experimental fork"
       ]
     },
     {
